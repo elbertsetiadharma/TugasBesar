@@ -1,0 +1,96 @@
+import java.util.Scanner;
+
+public class HitungKondisiDanSarana {
+	SetGet SG = new SetGet();
+	identitas ID = new identitas();
+	HitungRuang HR = new HitungRuang();
+	Scanner input = new Scanner(System.in);
+
+	public void InputKondisiDanRuang() {
+		HR.inputHitungRuang();
+		System.out.println("Jumlah Steker : ");
+		SG.setJumlahsteker(input.nextInt());
+		System.out.println("Kondisi Steker : ");
+		SG.setKondisisteker(input.nextLine());
+		System.out.println("Posisi Steker : ");
+		SG.setPosisisteker(input.nextLine());
+		System.out.println("Jumlah Kabel LCD : ");
+		SG.setJumlahkabellcd(input.nextInt());
+		System.out.println("Kondisi Kabel LCD : ");
+		SG.setKondisikabellcd(input.nextLine());
+		System.out.println("Posisi Kabel LCD : ");
+		SG.setPosisikabel(input.nextLine());
+		System.out.println("Jumlah Lampu : ");
+		SG.setJumlahlampu(input.nextInt());
+		System.out.println("Kondisi Lampu : ");
+		SG.setKondisilampu(input.nextLine());
+		System.out.println("Posisi Lampu : ");
+		SG.setPosisilampu(input.nextLine());
+		System.out.println("Jumlah Kipas Angin : ");
+		SG.setJumlahkipas(input.nextInt());
+		System.out.println("Kondisi Kipas Angin : ");
+		SG.setKondisikipas(input.nextLine());
+		System.out.println("Posisi Kipas : ");
+		SG.setPosisikipas(input.nextLine());
+		System.out.println("Jumlah AC : ");
+		SG.setJumlahac(input.nextInt());
+		System.out.println("Kondisi AC : ");
+		SG.setKondisiac(input.nextLine());
+		System.out.println("Posisi AC : ");
+		SG.setPosisiac(input.nextLine());
+		System.out.println("SSID : ");
+		SG.setSsid(input.nextLine());
+		System.out.println("Bandwidth : ");
+		SG.setBanwidth(input.nextLine());
+		System.out.println("Jumlah CCTV : ");
+		SG.setJumlahcctv(input.nextInt());
+		System.out.println("Kondisi CCTV : ");
+		SG.setKondisicctv(input.nextLine());
+		System.out.println("Posisi CCTV : ");
+		SG.setPosisicctv(input.nextLine());
+
+	}
+
+	public void outputKondisiRuangDanSarana() {
+		System.out.println("" + SG.getJumlahsteker() + SG.getKondisisteker()
+				+ SG.getPosisisteker());
+		if (SG.getJumlahsteker() >= 4 || SG.getJumlahsteker() == 4) {
+			// if (SG.getKondisisteker().equals("y")) {
+			if (SG.getPosisisteker().equals("Pojok")
+					|| (SG.getPosisisteker().equals("DekatDosen"))) {
+				System.out.println("Sesuai");
+			} else if (SG.getJumlahsteker() <= 3) {
+				if (SG.getPosisisteker().equals("Jauh")
+						|| (SG.getPosisisteker().equals("Tengah"))) {
+
+					System.out.println("Tidak Sesuai");
+					/* System.out.println("Tidak Sesuai"); */
+				}
+			}
+		}
+		if (SG.getJumlahkabellcd() >= 1) {
+			if (SG.getKondisikabellcd().equals("berfungsi")) {
+				if (SG.getPosisikabel().equals("dekat dosen")) {
+					System.out.println("Sesuai");
+				} else if (SG.getJumlahkabellcd() <= 1) {
+					System.out.println("Tidak Sesuai");
+				}
+				if (SG.getPosisikabel().equals("tidak berfungsi")) {
+					System.out.println("Tidak berfungsi");
+
+				}
+				if (SG.getPosisikabel().equals("jauh")
+						|| (SG.getPosisikabel().equals("tengah"))) {
+					System.out.println("tidak sesuai");
+				}
+			}
+		}
+		if (SG.getJumlahlampu()>=18){
+			if ( SG.getKondisilampu().equals("kondisi baik")){
+				if ( SG.getPosisilampu().equals("jauh")||(SG.getPosisilampu().equals("tengah"))){
+					System.out.println("Sesuai");
+				}
+			}
+		}
+	}
+}
