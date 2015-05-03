@@ -1,0 +1,227 @@
+import java.util.Scanner;
+
+
+public class AllOutput {
+		SetGet SG = new SetGet();
+		Scanner input = new Scanner(System.in);
+public void OutputAllOutput(){
+	
+	System.out.println(""+SG.getNama());
+	System.out.println(""+SG.getLokasi());
+	System.out.println(""+SG.getFakultas());
+//============================================================================================================================================
+	SG.setLuasruang(SG.getPanjangruang() * SG.getLebarruang());
+	System.out.println("Luas Ruangan Kelas :\n" + SG.getLuasruang());
+	if (SG.getPanjangruang() == SG.getLebarruang()) {
+		System.out.println("Ruangan Berbentuk Persegi\n ");
+	} else {
+		System.out.println("Ruangan Berbentuk Persegi Panjang\n");
+	}
+	SG.setRasioluas(SG.getLuasruang()/SG.getJumlahkursi());
+	System.out.println("Rasio Kelas :\n"+SG.getRasioluas());//jawaban tidak logis
+	if (SG.getRasioluas() >= 0.5) {//salah rumus harusnya separuh dari ruangan kelas dibagi kursi sesuai
+		System.out.println("Rasio Kelas Sesuai\n ");
+	} else {
+		System.out.println("Rasio Kelas Tidak Sesuai\n ");
+	}
+	System.out.println("Jumlah Pintu :\n" + SG.getJumlahpintu());
+	if (SG.getJumlahpintu() >= 2) {
+		System.out.println("Jumlah Pintu Sesuai\n");
+
+	} else {
+		System.out.println("Jumlah Pintu Tidak Sesuai\n ");
+	}
+	System.out.println("Jumlah Jendela :\n" + SG.getJumlahjendela());
+	if (SG.getJumlahjendela() >= 1) {
+		System.out.println("Jumlah Jendela Sesuai\n ");
+
+	} else {
+		System.out.println("Jumlah Jendela Tidak Sesuai\n ");
+}//====================================================================================================================================================
+	System.out.println("Kondisi Dan Sarana Steker Di Kelas :\n"
+			+ SG.getJumlahsteker() + SG.getKondisisteker()
+			+ SG.getPosisisteker());
+	if (SG.getJumlahsteker() >= 4 || SG.getJumlahsteker() == 4) {
+		if (SG.getKondisisteker().equals("ya\n")) {
+			if (SG.getPosisisteker().equals("Pojok\n")
+					|| (SG.getPosisisteker().equals("DekatDosen\n"))) {
+				System.out.println("Keadaan Steker Sesuai\n");
+			} else if (SG.getJumlahsteker() <= 3) {
+				if (SG.getPosisisteker().equals("Jauh\n")
+						|| (SG.getPosisisteker().equals("Tengah\n"))) {
+
+					System.out.println("Keadaan Steker Tidak Sesuai");
+					/* System.out.println("Tidak Sesuai"); */
+				}
+			}
+		}
+	}
+	System.out.println("Kondisi Dan Sarana LCD Di Kelas :\n"
+			+ SG.getJumlahkabellcd() + SG.getKondisikabellcd()
+			+ SG.getPosisikabel());
+	if (SG.getJumlahkabellcd() >= 1) {
+		if (SG.getKondisikabellcd().equals("berfungsi\n")) {
+			if (SG.getPosisikabel().equals("dekat dosen\n")) {
+				System.out.println("Keadaan Kabel LCD Sesuai\n");
+			} else if (SG.getJumlahkabellcd() <= 1) {
+				// System.out.println("Jumlah Kabel Tidak Sesuai");
+				if (SG.getPosisikabel().equals("tidak berfungsi\n")) {
+					// System.out.println("Kabel Tidak berfungsi");
+					if (SG.getPosisikabel().equals("jauh\n")
+							|| (SG.getPosisikabel().equals("tengah\n"))) {
+						System.out.println("Keadaan Kabel Tidak Sesuai\n");
+					}
+				}
+			}
+		}
+	}
+	System.out.println("Kondisi Dan Sarana Lampu Di Kelas :\n"
+			+ SG.getJumlahlampu() + SG.getKondisilampu()
+			+ SG.getPosisilampu());
+	if (SG.getJumlahlampu() >= 18) {
+		if (SG.getKondisilampu().equals("kondisi baik\n")) {
+			if (SG.getPosisilampu().equals("Tepat Ditengah\n")
+					|| (SG.getPosisilampu().equals("Sesuai Posisi\n"))) {
+				System.out.println("Keadaan Lampu Sesuai\n");
+			}
+
+			// lanjutan minggu 26 april 2014
+
+			else if (SG.getJumlahlampu() <= 18) {
+				if (SG.getKondisilampu().equals("rusak\n")) {
+					if (SG.getPosisilampu().equals("tak merata\n")) {
+						System.out.println("Keadaan Lampu Tidak Sesuai\n");
+					}
+				}
+			}
+		}
+	}
+	System.out.println("Kondisi Dan Sarana Kipas Di Kelas :\n"
+			+ SG.getJumlahkipas() + SG.getKondisikipas()
+			+ SG.getPosisikipas());
+	if (SG.getJumlahkipas() >= 2) {
+		if (SG.getKondisikipas().equals("berfungsi\n")) {
+			if (SG.getPosisikipas().equals("tepat ditengah\n")) {
+				System.out.println("Keadaan Kipas Sesuai\n");
+			}
+
+			else if (SG.getJumlahkipas() <= 2) {
+				if (SG.getKondisikipas().equals("tidak berfungsi\n")) {
+					if (SG.getPosisikipas().equals("hanya di sudut\n")) {
+						System.out.println("Keadaan Kipas tidak sesuai\n");
+					}
+				}
+			}
+		}
+	}
+	System.out.println("Kondisi Dan Sarana AC Di Kelas :\n"
+			+ SG.getJumlahac() + SG.getKondisiac() + SG.getPosisiac());
+	if (SG.getJumlahac() >= 1) {
+		if (SG.getKondisiac().equals("baik\n")) {
+			if (SG.getPosisiac().equals("dibelakang\n")
+					|| (SG.getPosisiac().equals("dipojok\n"))) {
+				System.out.println("Keadaan AC Sesuai\n");
+
+			} else if (SG.getJumlahac() >= 2 || (SG.getJumlahac() == 0)) {
+				if (SG.getKondisiac().equals("kurang baik\n")) {
+					if (SG.getPosisiac().equals("di depan\n")) {
+						System.out.println("KEadaan AC tidak sesuai\n");
+					}
+				}
+			}
+		}
+	}
+	System.out.println("Kondisi Dan Keadaan Wifi / Hotspot Di Kelas :\n"
+			+ SG.getSsid() + SG.getBanwidth());
+	// tanyakan apa sesuai dengan logika di Tugas Besar Flowchart yang
+	// diberikan
+	if (SG.getSsid().equals("UMM Hotspot\n")) {
+		if (SG.getBanwidth().equals("bisa login\n")) {
+			System.out.println("SSID WIFI Sesuai\n");
+		} else if (SG.getSsid().equals("Hotspot Tidak Ditemukan\n")) {
+			if (SG.getBanwidth().equals("tidak bisa login\n")) {
+				System.out.println("SSID WIFI tidak sesuai\n");
+			}
+		}
+	}
+	System.out
+			.println("Kondisi Dan Keadaan CCTV Di Kelas :\n"
+					+ SG.getJumlahcctv() + SG.getKondisicctv()
+					+ SG.getPosisicctv());
+	if (SG.getJumlahcctv() == 2) {
+		if (SG.getKondisicctv().equals("bekerja dengan baik\n")) {
+			if (SG.getPosisicctv().equals("di depan dan di belakang\n")
+					|| (SG.getPosisicctv().equals("di sudut sudut ruangan\n"))) {
+				System.out.println("Keadaan CCTV sesuai\n");
+
+			} else if (SG.getJumlahcctv() <= 2) {
+				if (SG.getKondisicctv().equals("rusak\n")) {
+					if (SG.getPosisicctv().equals("di depan saja\n")
+							|| (SG.getPosisicctv()
+									.equals("di belakang saja\n"))) {
+						System.out.println("Keadaan CCTV tidak sesuai\n");
+					}
+				}
+			}
+		}
+	}//=======================================================================================================================================
+	System.out.println("Lingkungan Ruang Kelas\n" + SG.getKondisilantai()
+			+ SG.getKondisidinding() + SG.getKondisiatap()
+			+ SG.getKondisipintu() + SG.getKondisijendela());
+	if (SG.getKondisilantai().equals("Bersih\n")) {
+		if (SG.getKondisidinding().equals("Bersih\n")) {
+			if (SG.getKondisiatap().equals("Bersih\n")) {
+				if (SG.getKondisipintu().equals("Bersih\n")) {
+					if (SG.getKondisijendela().equals("bersih\n")) {
+						System.out.println("Lingkungan Ruang Kelas Sesuai Dan Bersih\n");
+					}
+				}
+			}
+		}
+	}
+
+	else if (SG.getKondisilantai().equals("Kotor\n")) {
+		if (SG.getKondisidinding().equals("Kotor\n")) {
+			if (SG.getKondisiatap().equals("Kotor\n")) {
+				if (SG.getKondisipintu().equals("Kotor\n")) {
+					if (SG.getKondisijendela().equals("Kotor\n")) {
+						System.out
+								.println("Lingkungan Ruang Kelas Tidak Sesuai Dan Tidak Bersih");
+
+					}
+				}
+			}
+		}
+	}//============================================================================================================================================
+	System.out.println("Kebersihan Kelas" + SG.getSirkulasiudara()
+			+ SG.getPencahayaan() + SG.getKelembapan() + SG.getSuhu());
+	if (SG.getSirkulasiudara().equals("Lancar")) {
+		if (SG.getPencahayaan() >= 250 && SG.getPencahayaan() <= 350) {
+			if (SG.getKelembapan() >= 70 && SG.getKelembapan() <= 80) {
+				if (SG.getSuhu() >= 25 && SG.getSuhu() < 35) {
+				}
+			}
+		}
+	}//================================================================================================================================================
+	System.out.println("KeamananRuangKelas :\n" + SG.getKekokohan()
+			+ SG.getKunci() + SG.getBahaya());
+	if (SG.getKekokohan().equals("yeah")) {
+	
+	}//===============================================================================================================================================
+	System.out.println("Kenyamanan Ruang Kelas :\n" + SG.getKebisingan()
+			+ SG.getBau() + SG.getKebocoran() + SG.getAnalisiskerusakan()
+			+ SG.getKerusakan() + SG.getKeausan());
+	if (SG.getKebisingan().equals("tidak bising")) {
+		if (SG.getBau().equals("tidak bau")) {
+			if (SG.getKebocoran().equals("tidak bocor")) {
+				if (SG.getKerusakan().equals("tidak rusak")) {
+					if (SG.getKeausan().equals("tidak aus")) {
+					}
+				}
+			}
+		}
+	}//================================================================================================================================================
+}
+}
+
+
