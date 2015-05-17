@@ -1,0 +1,157 @@
+import java.util.Scanner;
+
+public class HitungRuang extends identitas{
+	 
+	int totSesuai=0;
+	int sesuai=0;
+	
+	public HitungRuang(){}
+	Scanner input = new Scanner(System.in);
+	
+	@Override
+	void inputHitungRuang(){
+	System.out.println("Panjang Ruang : ");
+	super.setPanjangruang(input.nextDouble());
+	System.out.println("Lebar Ruang : ");
+	super.setLebarruang(input.nextDouble());
+	System.out.println("Jumlah Kursi : ");
+	super.setJumlahkursi(input.nextInt());
+	System.out.println("Jumlah pintu : ");
+	super.setJumlahpintu(input.nextInt());
+	System.out.println("Jumlah Jendela : ");
+	super.setJumlahjendela(input.nextInt());
+}
+	
+	double luasruang(){
+		return super.getPanjangruang()*super.getLebarruang();
+		}
+	
+	String Bentukruang() {
+        String bentuk;
+        if(super.getPanjangruang().equals(super.getLebarruang()) ){
+            bentuk = "Bukan Persegi panjang";
+            System.out.println("Bentuk: " + bentuk);
+            System.out.println("TIDAK SESUAI");
+            return ("Bentuk Ruang: TIDAK SESUAI");
+        }
+        else{
+            bentuk = "Persegi panjang";
+            System.out.println("Bentuk: " + bentuk);
+            totSesuai++;
+            return("Bentuk ruang: SESUAI");   
+        }
+                   
+    }
+	
+	double rasioluas() {
+        double hasilrasio;
+        hasilrasio=luasruang() / super.getJumlahkursi();
+        if(hasilrasio>=0.5){
+            totSesuai++;
+            System.out.println("Rasio luas: SESUAI\n");
+        }
+        else{
+            System.out.println("Rasio luas: TIDAK SESUAI\n");
+        }
+       return hasilrasio;
+    }
+	
+	String analisispinjen(){
+        sesuai=0;
+        if(super.getJumlahpintu()>=2){
+            System.out.println("Jumlah pintu SESUAI");
+            sesuai++;            
+        }
+        else{
+            System.out.println("Jumalah pintu TIDAK SESUAI");
+        }
+        if(super.getJumlahjendela()>=1){
+            System.out.println("Jumlah jendela SESUAI");
+            sesuai++;
+        }
+        else{
+            System.out.println("Jumlah jendela TIDAK SESUAI");
+        }
+        if(sesuai==2){
+            totSesuai++;
+            return ("Analisis pintu dan jendela: SESUAI\n");
+        }
+        else{
+            return ("Analisis Pintu dan Jendela: TIDAK SESUAI\n");
+        }
+    }
+
+	String analisisRuangDanSarana() {
+		return null;
+		// TODO Auto-generated method stub
+		
+	}
+
+	void inputKondisiRuangDanSarana() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	String analisisLCD() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisLampu() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisKipasAngin() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisAC() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisInternet() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisCCTV() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	/*public void outputHitungRuang() {
+		SG.setLuasruang(SG.getPanjangruang() * SG.getLebarruang());
+		System.out.println("Luas Ruangan Kelas :\n" + SG.getLuasruang());
+		if (SG.getPanjangruang() == SG.getLebarruang()) {
+			System.out.println("Ruangan Berbentuk Persegi\n ");
+		} else {
+			System.out.println("Ruangan Berbentuk Persegi Panjang\n");
+		}
+		SG.setRasioluas(SG.getLuasruang()/SG.getJumlahkursi());
+		System.out.println("Rasio Kelas :\n"+SG.getRasioluas());//jawaban tidak logis
+		if (SG.getRasioluas() >= 0.5) {//salah rumus harusnya separuh dari ruangan kelas dibagi kursi sesuai
+			System.out.println("Rasio Kelas Sesuai\n ");
+		} else {
+			System.out.println("Rasio Kelas Tidak Sesuai\n ");
+		}
+		System.out.println("Jumlah Pintu :\n" + SG.getJumlahpintu());
+		if (SG.getJumlahpintu() >= 2) {
+			System.out.println("Jumlah Pintu Sesuai\n");
+
+		} else {
+			System.out.println("Jumlah Pintu Tidak Sesuai\n ");
+		}
+		System.out.println("Jumlah Jendela :\n" + SG.getJumlahjendela());
+		if (SG.getJumlahjendela() >= 1) {
+			System.out.println("Jumlah Jendela Sesuai\n ");
+
+		} else {
+			System.out.println("Jumlah Jendela Tidak Sesuai\n ");
+		}
+
+	}*/
+
+}
