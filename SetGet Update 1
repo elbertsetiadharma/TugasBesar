@@ -1,0 +1,655 @@
+abstract public class SetGet {
+	public SetGet(){}
+	
+	public SetGet(String Nama,String Lokasi , String Fakultas){
+		this.nama=Nama;
+		this.lokasi=Lokasi;
+		this.fakultas=Fakultas;
+		
+	} 
+	//====================================================================================================================
+	private String nama, lokasi, fakultas;
+	public void setNama(String nama) {
+		this.nama = nama;
+	}
+	public String getNama() {
+		return nama;
+	}
+
+	public String getLokasi() {
+		return lokasi;
+	}
+
+	public void setLokasi(String lokasi) {
+		this.lokasi = lokasi;
+	}
+
+	public String getFakultas() {
+		return fakultas;
+	}
+
+	public void setFakultas(String fakultas) {
+		this.fakultas = fakultas;
+	}
+
+	void inputidentitas(){}
+	void inputidentitas(String Nama ,String Lokasi ,String Fakultas){}
+	//=================================================================================================
+	private double panjangruang, lebarruang;
+	private int jumlahkursi, jumlahpintu,jumlahjendela;
+	void inputHitungRuang(){}
+	void inputHitungRuang(int panjangruang,int lebarruang ,int jumlahkursi ,int jumlahpintu ,int jumlahjendela ){}
+	//===========================================================================================================
+	private String bentukruang;
+	private double luasruang; 
+	private double rasioluas;
+	
+	public void setBentukruang(String bentukruang) {
+		this.bentukruang = bentukruang;
+	}
+
+	public void setLuasruang(Double luasruang) {
+		this.luasruang = luasruang;
+	}
+	public Double getLuasruang() {
+		return luasruang;
+	}
+
+	public Double getRasioluas() {
+		return rasioluas;
+	}
+
+	public void setRasioluas(Double rasioluas) {
+		this.rasioluas = rasioluas;
+	}
+	
+	//===========================================================================================================
+	
+	private int analisispinjen;
+	private int kelistrikan;
+	
+	//===========================================================================================================
+
+	
+	
+	private int jumlahkabellcd;
+	public int getJumlahkabellcd() {
+		return jumlahkabellcd;
+	}
+
+	public void setJumlahkabellcd(int jumlahkabellcd) {
+		this.jumlahkabellcd = jumlahkabellcd;
+	}
+	
+	private int kondisikabellcd;
+	public int getKondisikabellcd() {
+		return kondisikabellcd;
+	}
+
+	public void setKondisikabellcd(int kondisikabellcd) {
+		this.kondisikabellcd = kondisikabellcd;
+	}
+
+	
+	private int posisikabel;
+	
+	public int getPosisikabel() {
+		return posisikabel;
+	}
+
+	public void setPosisikabel(int posisikabel) {
+		this.posisikabel = posisikabel;
+	}
+	
+	private int posisisteker;
+	public int getPosisisteker() {
+		return posisisteker;
+	}
+
+	public void setPosisisteker(int posisisteker) {
+		this.posisisteker = posisisteker;
+	}
+	//===========================================================================================================
+	private int ssid;
+	private int banwidth;
+	
+	public int getSsid() {
+		return ssid;
+	}
+
+	public void setSsid(int ssid) {
+		this.ssid = ssid;
+	}
+
+	public int getBanwidth() {
+		return banwidth;
+	}
+
+	public void setBanwidth(int banwidth) {
+		this.banwidth = banwidth;
+	}
+	//===========================================================================================================
+	private int lcd;
+	private int lampu;
+	private int kipas;
+	private int internet;
+	private int cctv;
+	private int analisiskebersihan;
+	private int analisisudara;
+	private int analisispencahaya;
+	private int analisiskelembapan;
+	private int analisissuhu;
+	private int analisiskebisingan;
+	private int analisisbau;
+	private int analisiskebocoran;
+	private int analisiskerusakan;
+	private int analisiskeausan;
+	private int analisiskekokohan;
+	private int analisiskunci;
+	private int analisiskeamanan;
+
+
+	// DALAM RUANG
+
+	private int jumlahsteker,  jumlahlampu, jumlahkipas,
+			jumlahac, jumlahcctv;
+
+	private int kondisisteker, 
+			kondisilampu, posisilampu, kondisikipas, posisikipas, kondisiac,
+			posisiac, kondisicctv, posisicctv;
+
+	// KEBERSIHAN
+	private int kondisilantai, kondisidinding, kondisiatap, kondisipintu,
+			kondisijendela;
+
+	// KEADAAN RUANG
+	private int pencahayaan, kelembapan, suhu,sirkulasiudara;
+	// KONDISI RUANG
+	private int kebisingan, bau, kebocoran, kerusakan, keausan;
+	private int kekokohan, kunci, bahaya;
+
+	
+
+	
+
+	
+	public Double getPanjangruang() {
+		return panjangruang;
+	}
+
+	public void setPanjangruang(Double panjangruang) {
+		this.panjangruang = panjangruang;
+	}
+
+	public Double getLebarruang() {
+		return lebarruang;
+	}
+
+	public void setLebarruang(Double lebarruang) {
+		this.lebarruang = lebarruang;
+	}
+
+	public int getJumlahkursi() {
+		return jumlahkursi;
+	}
+
+	public void setJumlahkursi(int jumlahkursi) {
+		this.jumlahkursi = jumlahkursi;
+	}
+
+	public int getJumlahpintu() {
+		return jumlahpintu;
+	}
+
+	public void setJumlahpintu(int jumlahpintu) {
+		this.jumlahpintu = jumlahpintu;
+	}
+
+	public int getJumlahjendela() {
+		return jumlahjendela;
+	}
+
+	public void setJumlahjendela(int jumlahjendela) {
+		this.jumlahjendela = jumlahjendela;
+	}
+
+
+
+
+	
+
+	public int getAnalisispinjen() {
+		return analisispinjen;
+	}
+
+	public void setAnalisispinjen(int analisispinjen) {
+		this.analisispinjen = analisispinjen;
+	}
+
+	public int getKelistrikan() {
+		return kelistrikan;
+	}
+
+	public void setKelistrikan(int kelistrikan) {
+		this.kelistrikan = kelistrikan;
+	}
+
+	public int getLcd() {
+		return lcd;
+	}
+
+	public void setLcd(int lcd) {
+		this.lcd = lcd;
+	}
+
+	public int getLampu() {
+		return lampu;
+	}
+
+	public void setLampu(int lampu) {
+		this.lampu = lampu;
+	}
+
+	public int getKipas() {
+		return kipas;
+	}
+
+	public void setKipas(int kipas) {
+		this.kipas = kipas;
+	}
+
+	public int getInternet() {
+		return internet;
+	}
+
+	public void setInternet(int internet) {
+		this.internet = internet;
+	}
+
+	public int getCctv() {
+		return cctv;
+	}
+
+	public void setCctv(int cctv) {
+		this.cctv = cctv;
+	}
+
+	public int getAnalisiskebersihan() {
+		return analisiskebersihan;
+	}
+
+	public void setAnalisiskebersihan(int analisiskebersihan) {
+		this.analisiskebersihan = analisiskebersihan;
+	}
+
+	public int getAnalisisudara() {
+		return analisisudara;
+	}
+
+	public void setAnalisisudara(int analisisudara) {
+		this.analisisudara = analisisudara;
+	}
+
+	public int getAnalisispencahaya() {
+		return analisispencahaya;
+	}
+
+	public void setAnalisispencahaya(int analisispencahaya) {
+		this.analisispencahaya = analisispencahaya;
+	}
+
+	public int getAnalisiskelembapan() {
+		return analisiskelembapan;
+	}
+
+	public void setAnalisiskelembapan(int analisiskelembapan) {
+		this.analisiskelembapan = analisiskelembapan;
+	}
+
+	public int getAnalisissuhu() {
+		return analisissuhu;
+	}
+
+	public void setAnalisissuhu(int analisissuhu) {
+		this.analisissuhu = analisissuhu;
+	}
+
+	public int getAnalisiskebisingan() {
+		return analisiskebisingan;
+	}
+
+	public void setAnalisiskebisingan(int analisiskebisingan) {
+		this.analisiskebisingan = analisiskebisingan;
+	}
+
+	public int getAnalisisbau() {
+		return analisisbau;
+	}
+
+	public void setAnalisisbau(int analisisbau) {
+		this.analisisbau = analisisbau;
+	}
+
+	public int getAnalisiskebocoran() {
+		return analisiskebocoran;
+	}
+
+	public void setAnalisiskebocoran(int analisiskebocoran) {
+		this.analisiskebocoran = analisiskebocoran;
+	}
+
+	public int getAnalisiskerusakan() {
+		return analisiskerusakan;
+	}
+
+	public void setAnalisiskerusakan(int analisiskerusakan) {
+		this.analisiskerusakan = analisiskerusakan;
+	}
+
+	public int getAnalisiskeausan() {
+		return analisiskeausan;
+	}
+
+	public void setAnalisiskeausan(int analisiskeausan) {
+		this.analisiskeausan = analisiskeausan;
+	}
+
+	public int getAnalisiskekokohan() {
+		return analisiskekokohan;
+	}
+
+	public void setAnalisiskekokohan(int analisiskekokohan) {
+		this.analisiskekokohan = analisiskekokohan;
+	}
+
+	public int getAnalisiskunci() {
+		return analisiskunci;
+	}
+
+	public void setAnalisiskunci(int analisiskunci) {
+		this.analisiskunci = analisiskunci;
+	}
+
+	public int getAnalisiskeamanan() {
+		return analisiskeamanan;
+	}
+
+	public void setAnalisiskeamanan(int analisiskeamanan) {
+		this.analisiskeamanan = analisiskeamanan;
+	}
+
+	public int getJumlahsteker() {
+		return jumlahsteker;
+	}
+
+	public void setJumlahsteker(int jumlahsteker) {
+		this.jumlahsteker = jumlahsteker;
+	}
+
+	
+
+	public int getJumlahlampu() {
+		return jumlahlampu;
+	}
+
+	public void setJumlahlampu(int jumlahlampu) {
+		this.jumlahlampu = jumlahlampu;
+	}
+
+	public int getJumlahkipas() {
+		return jumlahkipas;
+	}
+
+	public void setJumlahkipas(int jumlahkipas) {
+		this.jumlahkipas = jumlahkipas;
+	}
+
+	public int getJumlahac() {
+		return jumlahac;
+	}
+
+	public void setJumlahac(int jumlahac) {
+		this.jumlahac = jumlahac;
+	}
+
+	public int getJumlahcctv() {
+		return jumlahcctv;
+	}
+
+	public void setJumlahcctv(int jumlahcctv) {
+		this.jumlahcctv = jumlahcctv;
+	}
+	
+	public int getKondisisteker() {
+		return kondisisteker;
+	}
+
+	public void setKondisisteker(int kondisisteker) {
+		this.kondisisteker = kondisisteker;
+	}
+
+	public int getKondisilampu() {
+		return kondisilampu;
+	}
+
+	public void setKondisilampu(int kondisilampu) {
+		this.kondisilampu = kondisilampu;
+	}
+
+	public int getPosisilampu() {
+		return posisilampu;
+	}
+
+	public void setPosisilampu(int posisilampu) {
+		this.posisilampu = posisilampu;
+	}
+
+	public int getKondisikipas() {
+		return kondisikipas;
+	}
+
+	public void setKondisikipas(int kondisikipas) {
+		this.kondisikipas = kondisikipas;
+	}
+
+	public int getPosisikipas() {
+		return posisikipas;
+	}
+
+	public void setPosisikipas(int posisikipas) {
+		this.posisikipas = posisikipas;
+	}
+
+	public int getKondisiac() {
+		return kondisiac;
+	}
+
+	public void setKondisiac(int kondisiac) {
+		this.kondisiac = kondisiac;
+	}
+
+	public int getPosisiac() {
+		return posisiac;
+	}
+
+	public void setPosisiac(int posisiac) {
+		this.posisiac = posisiac;
+	}
+
+	public int getKondisicctv() {
+		return kondisicctv;
+	}
+
+	public void setKondisicctv(int kondisicctv) {
+		this.kondisicctv = kondisicctv;
+	}
+
+	public int getPosisicctv() {
+		return posisicctv;
+	}
+
+	public void setPosisicctv(int posisicctv) {
+		this.posisicctv = posisicctv;
+	}
+
+
+	public int getKondisilantai() {
+		return kondisilantai;
+	}
+
+	public void setKondisilantai(int kondisilantai) {
+		this.kondisilantai = kondisilantai;
+	}
+
+	public int getKondisidinding() {
+		return kondisidinding;
+	}
+
+	public void setKondisidinding(int kondisidinding) {
+		this.kondisidinding = kondisidinding;
+	}
+
+	public int getKondisiatap() {
+		return kondisiatap;
+	}
+
+	public void setKondisiatap(int kondisiatap) {
+		this.kondisiatap = kondisiatap;
+	}
+
+	public int getKondisipintu() {
+		return kondisipintu;
+	}
+
+	public void setKondisipintu(int kondisipintu) {
+		this.kondisipintu = kondisipintu;
+	}
+
+	public int getKondisijendela() {
+		return kondisijendela;
+	}
+
+	public void setKondisijendela(int kondisijendela) {
+		this.kondisijendela = kondisijendela;
+	}
+
+	public int getSirkulasiudara() {
+		return sirkulasiudara;
+	}
+
+	public void setSirkulasiudara(int sirkulasiudara) {
+		this.sirkulasiudara = sirkulasiudara;
+	}
+
+	public int getKebisingan() {
+		return kebisingan;
+	}
+
+	public void setKebisingan(int kebisingan) {
+		this.kebisingan = kebisingan;
+	}
+
+	public int getBau() {
+		return bau;
+	}
+
+	public void setBau(int bau) {
+		this.bau = bau;
+	}
+
+	public int getKebocoran() {
+		return kebocoran;
+	}
+
+	public void setKebocoran(int kebocoran) {
+		this.kebocoran = kebocoran;
+	}
+
+	public int getKerusakan() {
+		return kerusakan;
+	}
+
+	public void setKerusakan(int kerusakan) {
+		this.kerusakan = kerusakan;
+	}
+
+	public int getKeausan() {
+		return keausan;
+	}
+
+	public void setKeausan(int keausan) {
+		this.keausan = keausan;
+	}
+
+	public int getKekokohan() {
+		return kekokohan;
+	}
+
+	public void setKekokohan(int kekokohan) {
+		this.kekokohan = kekokohan;
+	}
+
+	public int getKunci() {
+		return kunci;
+	}
+
+	public void setKunci(int kunci) {
+		this.kunci = kunci;
+	}
+
+	public int getBahaya() {
+		return bahaya;
+	}
+
+	public void setBahaya(int bahaya) {
+		this.bahaya = bahaya;
+	}
+
+	public String getBentukruang() {
+		return bentukruang;
+	}
+
+	public void setPanjangruang(double panjangruang) {
+		this.panjangruang = panjangruang;
+	}
+
+	public void setLebarruang(double lebarruang) {
+		this.lebarruang = lebarruang;
+	}
+
+	public void setLuasruang(double luasruang) {
+		this.luasruang = luasruang;
+	}
+
+	public void setRasioluas(double rasioluas) {
+		this.rasioluas = rasioluas;
+	}
+
+	public int getPencahayaan() {
+		return pencahayaan;
+	}
+
+	public void setPencahayaan(int pencahayaan) {
+		this.pencahayaan = pencahayaan;
+	}
+
+	public int getKelembapan() {
+		return kelembapan;
+	}
+
+	public void setKelembapan(int kelembapan) {
+		this.kelembapan = kelembapan;
+	}
+
+	public int getSuhu() {
+		return suhu;
+	}
+
+	public void setSuhu(int suhu) {
+		this.suhu = suhu;
+	}
+
+	
+
+	
+}
