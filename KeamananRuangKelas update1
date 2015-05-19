@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+public class KeamananRuangKelas extends HitungRuang {
+public KeamananRuangKelas(){}
+	Scanner input = new Scanner(System.in);
+
+	public void inputKeamananRuangKelas() {
+		System.out.println("Input Kekokohan :\n");
+		super.setKekokohan(input.nextInt());
+		System.out.println("Keamanan Kunci Pintu Dan Jendela :\n");
+		super.setKunci(input.nextInt());
+		System.out.println("Keamanan Ruang :\n");
+		super.setBahaya(input.nextInt());
+	}
+
+	@Override
+    String analisisKekokohan(){
+        if(super.getKekokohan()==2){
+            totSesuai++;
+            return ("Kekokohan: SESUIA");
+        }
+        else{
+            return ("Kekokohan: TIDAK SESUIA");
+        }
+    }
+	
+	 @Override
+	    String analisisKunciPintu(){
+	        if(super.getKunci()==1){ 
+	            totSesuai++;
+	            return ("Kunci pintu: SESUIA");
+	        }
+	        else{
+	            return ("Kunci pintu: TIDAK SESUIA");
+	        }
+	    }
+	
+	 @Override
+	    String analisisKunciJendela(){
+	        if(super.getKuncijendela()==1){
+	            totSesuai++;
+	            return ("Kunci jendela: SESUIA");
+	        }
+	        else{
+	            return ("Kunci jendela: TIDAK SESUIA");
+	        }
+	    }
+	 
+	 @Override
+	    String analisisKeamanan(){
+	        if(super.getBahaya()==1){
+	            totSesuai++;
+	            return ("Keamanan: SESUAI\n\n");
+	        }
+	        else{
+	            return ("Keamanan: TIDAK SESUAI\n\n");
+	        }
+	    }
+	 
+	 @Override
+	    void cetakKeamanan(){
+	        System.out.println("---HASIL ANALISIS KEAMANAN---");
+	        System.out.println(""+analisisKekokohan());
+	        System.out.println(""+analisisKunciPintu());
+	        System.out.println(""+analisisKunciJendela());
+	        System.out.println(""+analisisKeamanan());
+	    }
+	 
+	/*public void outputKeamananRuangKelas() {
+		System.out.println("KeamananRuangKelas :\n" + SG.getKekokohan()
+				+ SG.getKunci() + SG.getBahaya());
+		if (SG.getKekokohan().equals("yeah")) {
+		
+		}
+	}*/
+}
