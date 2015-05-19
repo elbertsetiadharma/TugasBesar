@@ -1,0 +1,103 @@
+import java.util.Scanner;
+
+public class KenyamananKelas extends KebersihanKelas {
+public KenyamananKelas(){}
+	//identitas ID = new identitas();
+	//HitungRuang HR = new HitungRuang();
+	Scanner input = new Scanner(System.in);
+
+	public void inputKenyamananKelas() {
+		System.out.println("Tingkat Kebisingan :\n");
+		// SG.setAnalisiskebisingan(input.nextLine());
+		super.setKebisingan(input.nextInt());
+		System.out.println("Tingkat Bau :\n");
+		super.setBau(input.nextInt());
+		System.out.println("Tingkat Kebocoran :\n");
+		super.setKebocoran(input.nextInt());
+		System.out.println("Tingkat Kerusakan :\n");
+		super.setKerusakan(input.nextInt());
+		System.out.println("Tingkat Keausan :\n");
+		super.setKerusakan(input.nextInt());
+
+	}
+	
+	@Override
+    String analisisKebisingan(){
+        if(super.getKebisingan()==2){
+            totSesuai++;
+            return ("Kebisingna: SESUAI");
+        }
+        else{
+            return ("Kebisingna: TIDAK SESUAI");
+        }
+    }
+	
+	 @Override
+	    String analisisBau(){
+	        if(super.getBau()==2){
+	            totSesuai++;
+	            return ("Bau: SESUAI");
+	        }
+	        else{
+	            return ("Bau: TIDAK SESUAI");
+	        }
+	    }
+	 
+	 @Override
+	    String analisisKebocoran(){
+	        if(super.getKebocoran()==2){
+	            totSesuai++;
+	            return ("Kebocoran: SESUAI");
+	        }
+	        else{
+	            return ("Kebocoran: TIDAK SESUAI");
+	        }
+	    }
+	 
+	 @Override
+	    String analisisKerusakan(){
+	        if(super.getKerusakan()==2){
+	            totSesuai++;
+	            return ("Kerusakan: SESUIA");
+	        }
+	        else{
+	            return ("Kerusakan: TIDAK SESUIA");
+	        }
+	    }
+	 
+	 @Override
+	    String analisisKeausan(){
+	        if(super.getKeausan()==2){
+	            totSesuai++;
+	            return ("Keausan: SESUIA\n\n");
+	        }
+	        else{
+	            return ("Keausan: TIDAK SESUIA\n\n");}
+	    }
+	 @Override
+	    void cetakKenyamanan(){
+	        System.out.println("---HASIL ANALISIS KENYAMANAN---");
+	        System.out.println(""+analisisKebisingan());
+	        System.out.println(""+analisisBau());
+	        System.out.println(""+analisisKebocoran());
+	        System.out.println(""+analisisKerusakan());
+	        System.out.println(""+analisisKeausan());
+	    }
+	
+/*
+	public void outputKenyamananKelas() {
+		System.out.println("Kenyamanan Ruang Kelas :\n" + SG.getKebisingan()
+				+ SG.getBau() + SG.getKebocoran() + SG.getAnalisiskerusakan()
+				+ SG.getKerusakan() + SG.getKeausan());
+		if (SG.getKebisingan().equals("tidak bising")) {
+			if (SG.getBau().equals("tidak bau")) {
+				if (SG.getKebocoran().equals("tidak bocor")) {
+					if (SG.getKerusakan().equals("tidak rusak")) {
+						if (SG.getKeausan().equals("tidak aus")) {
+						}
+					}
+				}
+			}
+		}
+	}*/
+}
