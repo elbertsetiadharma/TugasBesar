@@ -1,0 +1,107 @@
+import java.util.Scanner;
+
+public class HitungLingkunganRuangKelas extends HitungRuang {
+
+	Scanner input = new Scanner(System.in);
+	//identitas ID = new identitas();
+	public HitungLingkunganRuangKelas(){}
+	//HitungRuang HR = new HitungRuang();
+	//HitungKondisiDanSarana HKS = new HitungKondisiDanSarana();
+	//SetGet SG = new SetGet();
+
+	//public HitungLingkunganRuangKelas() {
+		//super();
+
+	//}
+		
+	 void inputLingkunganRuangKelas() {	 
+		System.out.println("Kondisi Lantai :\n");
+		super.setKondisilantai(input.nextInt());
+		System.out.println("Kondisi Dinding :\n");
+		super.setKondisidinding(input.nextInt());
+		System.out.println("Kondisi Atap :\n");
+		super.setKondisiatap(input.nextInt());
+		System.out.println("Kondisi Pintu :\n");
+		super.setKondisipintu(input.nextInt());
+		System.out.println("Kondisi Jendela :\n");
+		super.setKondisijendela(input.nextInt());
+	}
+	 @Override
+	    String analisisKebersihan(){
+	        sesuai=0;
+	        
+	        if(super.getKondisilantai()==1){
+	            System.out.println("Kondisi lantai SESUAI");
+	            sesuai++;
+	        }
+	        else{
+	            System.out.println("Kondisi lantai TIDAK SESUAI");
+	        }
+	        
+	        if(super.getKondisidinding()==1){
+	            System.out.println("Kondisi dinding SESUAI"); 
+	            sesuai++;
+	        }
+	        else{
+	        }
+	        
+	        if(super.getKondisiatap()==1){
+	            System.out.println("Kondisi atap SESUAI");
+	            sesuai++;
+	        }
+	        else{
+	            System.out.println("Kondisi atap TIDAK SESUAI");
+	        }
+	       
+	        if(super.getKondisipintu()==1){
+	            System.out.println("Kondisi pintu SESUAI");
+	            sesuai++;
+	        }
+	        else{
+	            System.out.println("Kondisi pintu TIDAK SESUAI");
+	        }
+	        
+	        if(super.getKondisijendela()==1){
+	            System.out.println("Kondisi jendela SESUAI");
+	            sesuai++;
+	        }
+	        
+	        else{
+	            System.out.println("Kondisi Jendela TIDAK SESUAI");
+	        }
+	        if(sesuai==5){
+	            totSesuai++;
+	            return ("Analisis Kebrsihan: SESUAI\n\n");
+	        }
+	        else{
+	            return ("Analisis Kebrsihan: TIDAK SESUAI\n\n");
+	        }
+	    }
+	 
+		@Override
+	    void cetakKebersihan(){
+	        System.out.println("---HASIL ANALISIS KEBERSIHAN---");
+	        System.out.println(""+analisisKebersihan());
+	    }
+	/*
+	 * public void outputLingkunganRuangKelas() {
+	 * System.out.println("Lingkungan Ruang Kelas\n" + SG.getKondisilantai() +
+	 * SG.getKondisidinding() + SG.getKondisiatap() + SG.getKondisipintu() +
+	 * SG.getKondisijendela()); if (SG.getKondisilantai().equals("Bersih\n")) {
+	 * if (SG.getKondisidinding().equals("Bersih\n")) { if
+	 * (SG.getKondisiatap().equals("Bersih\n")) { if
+	 * (SG.getKondisipintu().equals("Bersih\n")) { if
+	 * (SG.getKondisijendela().equals("bersih\n")) {
+	 * System.out.println("Lingkungan Ruang Kelas Sesuai Dan Bersih\n"); } } } }
+	 * }
+	 * 
+	 * else if (SG.getKondisilantai().equals("Kotor\n")) { if
+	 * (SG.getKondisidinding().equals("Kotor\n")) { if
+	 * (SG.getKondisiatap().equals("Kotor\n")) { if
+	 * (SG.getKondisipintu().equals("Kotor\n")) { if
+	 * (SG.getKondisijendela().equals("Kotor\n")) { System.out
+	 * .println("Lingkungan Ruang Kelas Tidak Sesuai Dan Tidak Bersih");
+	 * 
+	 * } } } } } }
+	 */
+}
