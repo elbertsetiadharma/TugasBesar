@@ -1,0 +1,214 @@
+//import java.util.Scanner;
+
+abstract public class HitungLingkunganRuangKelas extends identitas implements inter {
+
+	/*private int Kondisilantai;
+	private int Kondisidinding;
+	private int Kondisiatap;
+	private int Kondisipintu;
+	private int Kondisijendela;
+	*/
+	private String kondisiLantai;
+	private String kondisiDinding;
+	private String kondisiAtap;
+	private String kondisiPintu;
+	private String kondisiJendela;
+	
+	public HitungLingkunganRuangKelas(String nama, String lokasi,
+			String Fakultas) {
+		super(nama, lokasi, Fakultas);
+	}
+	
+	public HitungLingkunganRuangKelas(String nama, String lokasi,
+			String Fakultas, String kondisiLantai, String kondisiDinding,
+			String kondisiAtap, String kondisiPintu, String kondisiJendela) {
+		super(nama, lokasi, Fakultas);
+		this.kondisiLantai = kondisiLantai;
+		this.kondisiDinding = kondisiDinding;
+		this.kondisiAtap = kondisiAtap;
+		this.kondisiPintu = kondisiPintu;
+		this.kondisiJendela = kondisiJendela;
+	}
+	
+	
+	public String getKondisiLantai() {
+		return kondisiLantai;
+	}
+
+	public void setKondisiLantai(String kondisiLantai) {
+		this.kondisiLantai = kondisiLantai;
+	}
+
+	public String getKondisiDinding() {
+		return kondisiDinding;
+	}
+
+	public void setKondisiDinding(String kondisiDinding) {
+		this.kondisiDinding = kondisiDinding;
+	}
+
+	public String getKondisiAtap() {
+		return kondisiAtap;
+	}
+
+	public void setKondisiAtap(String kondisiAtap) {
+		this.kondisiAtap = kondisiAtap;
+	}
+
+	public String getKondisiPintu() {
+		return kondisiPintu;
+	}
+
+	public void setKondisiPintu(String kondisiPintu) {
+		this.kondisiPintu = kondisiPintu;
+	}
+
+	public String getKondisiJendela() {
+		return kondisiJendela;
+	}
+
+	public void setKondisiJendela(String kondisiJendela) {
+		this.kondisiJendela = kondisiJendela;
+	}
+
+	
+	
+	String analisisKebersihan(String lantai, String dinding, String atap, String pintu, String jendela){
+		if("bersih".equals(lantai) && "bersih".equals(dinding) && "bersih".equals(jendela) && "bersih".equals(atap) && "bersih".equals(pintu)){
+			return "sesuai";
+		}
+		else{
+			return "tidak sesuai";
+		}
+	}
+
+	
+	
+	/*Scanner input = new Scanner(System.in);
+	//identitas ID = new identitas();
+	public HitungLingkunganRuangKelas(){}
+	//HitungRuang HR = new HitungRuang();
+	//HitungKondisiDanSarana HKS = new HitungKondisiDanSarana();
+	//SetGet SG = new SetGet();
+
+	//public HitungLingkunganRuangKelas() {
+		//super();
+
+	//}
+		
+	
+	
+	
+	 void inputLingkunganRuangKelas() {	 
+		System.out.println("Kondisi Lantai :\n");
+		setKondisilantai(input.nextInt());
+		System.out.println("Kondisi Dinding :\n");
+		setKondisidinding(input.nextInt());
+		System.out.println("Kondisi Atap :\n");
+		setKondisiatap(input.nextInt());
+		System.out.println("Kondisi Pintu :\n");
+		setKondisipintu(input.nextInt());
+		System.out.println("Kondisi Jendela :\n");
+		setKondisijendela(input.nextInt());
+	}
+	 public int getKondisilantai() {
+		return Kondisilantai;
+	}
+
+	public void setKondisilantai(int kondisilantai) {
+		Kondisilantai = kondisilantai;
+	}
+
+	public int getKondisidinding() {
+		return Kondisidinding;
+	}
+
+	public void setKondisidinding(int kondisidinding) {
+		Kondisidinding = kondisidinding;
+	}
+
+	public int getKondisiatap() {
+		return Kondisiatap;
+	}
+
+	public void setKondisiatap(int kondisiatap) {
+		Kondisiatap = kondisiatap;
+	}
+
+	public int getKondisipintu() {
+		return Kondisipintu;
+	}
+
+	public void setKondisipintu(int kondisipintu) {
+		Kondisipintu = kondisipintu;
+	}
+
+	public int getKondisijendela() {
+		return Kondisijendela;
+	}
+
+	public void setKondisijendela(int kondisijendela) {
+		Kondisijendela = kondisijendela;
+	}
+
+	public Scanner getInput() {
+		return input;
+	}
+
+	public void setInput(Scanner input) {
+		this.input = input;
+	}
+
+	@Override	
+	    String analisisKebersihan(){
+	        sesuai=0;
+	        
+	        if(getKondisilantai()==1){
+	            System.out.println("Kondisi lantai SESUAI");
+	            sesuai++;
+	        }
+	        else{
+	            System.out.println("Kondisi lantai TIDAK SESUAI");
+	        }
+	        
+	        if(getKondisidinding()==1){
+	            System.out.println("Kondisi dinding SESUAI"); 
+	            sesuai++;
+	        }
+	        else{
+	        }
+	        
+	        if(getKondisiatap()==1){
+	            System.out.println("Kondisi atap SESUAI");
+	            sesuai++;
+	        }
+	        else{
+	            System.out.println("Kondisi atap TIDAK SESUAI");
+	        }
+	       
+	        if(getKondisipintu()==1){
+	            System.out.println("Kondisi pintu SESUAI");
+	            sesuai++;
+	        }
+	        else{
+	            System.out.println("Kondisi pintu TIDAK SESUAI");
+	        }
+	        
+	        if(getKondisijendela()==1){
+	            System.out.println("Kondisi jendela SESUAI");
+	            sesuai++;
+	        }
+	        
+	        else{
+	            System.out.println("Kondisi Jendela TIDAK SESUAI");
+	        }
+	        if(sesuai==5){
+	            totSesuai++;
+	            return ("Analisis Kebrsihan: SESUAI\n\n");
+	        }
+	        else{
+	            return ("Analisis Kebrsihan: TIDAK SESUAI\n\n");
+	        }
+	    }
+	 
+}
