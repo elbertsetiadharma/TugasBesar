@@ -1,0 +1,152 @@
+//import java.util.Scanner;
+
+ public abstract class identitas {
+	 
+	 	private String nama;
+		private String lokasi;
+		private String Fakultas;
+		
+		public identitas(){
+			
+		}
+		
+		public identitas(String nama, String lokasi,
+				String fakultas) {
+			
+			this.nama = nama;
+			this.lokasi = lokasi;
+			this.Fakultas = fakultas;
+		}
+		
+		
+		public void setNamaRuang(String nama) {
+			this.nama = nama;
+		}
+
+		public void setLokasiRuang(String lokasi) {
+			this.lokasi = lokasi;
+		}
+
+		public void setFakultas(String fakultas) {
+			this.Fakultas = fakultas;
+		}
+
+		public String getNamaRuang() {
+			return nama;
+		}
+		public String getLokasiRuang() {
+			return lokasi;
+		}
+		public String getFakultas() {
+			return Fakultas;
+		}
+
+		
+		abstract public String deskripsiKelas();
+		
+		
+		
+
+	
+	 
+	/*private String nama, lokasi, fakultas;
+	private int sesuai = 0;
+	private int tidaksesuai = 0;
+
+	public String getNama() {
+		return nama;
+	}
+
+	public void setNama(String nama) {
+		this.nama = nama;
+	}
+
+	public String getLokasi() {
+		return lokasi;
+	}
+
+	public void setLokasi(String lokasi) {
+		this.lokasi = lokasi;
+	}
+
+	public String getFakultas() {
+		return fakultas;
+	}
+
+	public void setFakultas(String fakultas) {
+		this.fakultas = fakultas;
+	}
+
+	public Scanner getInput() {
+		return input;
+	}
+
+	public void setInput(Scanner input) {
+		this.input = input;
+	}
+
+	Scanner input = new Scanner(System.in);
+/*
+	/*void inputidentitas() {
+		System.out.println("Nama Ruang : \n");
+		setNama(input.nextLine());
+		System.out.println("Lokasi Ruang : \n");
+		setLokasi(input.nextLine());
+		System.out.println("Nama Fakultas : \n");
+		setFakultas(input.nextLine());
+	}*/
+
+	/*void cetak() {
+		System.out.println(getNama() + "\n" + getLokasi() + "\n"
+				+ (getFakultas()));
+		// System.out.println(getIdentitas);
+		// TODO Auto-generated method stub
+
+	}*/
+
+	//abstract public String DeskripsiKelas();
+
+	/*String analisisKebersihan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	void cetakKenyamanan() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	String analisisKerusakan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisKeausan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisKebocoran() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisBau() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisKebisingan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/*
+	 * public void outputidenttas (){
+	 * 
+	 * System.out.println(""+SG.getNama());
+	 * System.out.println(""+SG.getLokasi());
+	 * System.out.println(""+SG.getFakultas()); }
+	 */
+
+}
