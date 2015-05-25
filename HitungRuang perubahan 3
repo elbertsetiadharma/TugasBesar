@@ -1,0 +1,428 @@
+//import java.util.Scanner;
+
+//public abstract class HitungRuang extends identitas implements inter {
+	public abstract class HitungRuang extends identitas {
+		private int panjangRuang;
+		private int lebarRuang;
+		private int jumlahKursi;
+		private int jumlahPintu;
+		private int jumlahJendela;
+		
+		public HitungRuang(String nama, String lokasi,
+				String fakultas) {
+			super(nama, lokasi, fakultas);
+
+		}
+		
+		
+		
+		public HitungRuang(String Nama, String Lokasi,
+				String Fakultas, int panjangRuang, int lebarRuang, int jumlahKursi,
+				int jumlahPintu, int jumlahJendela) {
+			super(Nama , Lokasi, Fakultas);
+			this.panjangRuang = panjangRuang;
+			this.lebarRuang = lebarRuang;
+			this.jumlahKursi = jumlahKursi;
+			this.jumlahPintu = jumlahPintu;
+			this.jumlahJendela = jumlahJendela;
+		}
+
+
+
+
+		public int getPanjangRuang() {
+			return panjangRuang;
+		}
+		public void setPanjangRuang(int panjangRuang) {
+			this.panjangRuang = panjangRuang;
+		}
+		public int getLebarRuang() {
+			return lebarRuang;
+		}
+		public void setLebarRuang(int lebarRuang) {
+			this.lebarRuang = lebarRuang;
+		}
+		public int getJumlahKursi() {
+			return jumlahKursi;
+		}
+		public void setJumlahKursi(int jumlahKursi) {
+			this.jumlahKursi = jumlahKursi;
+		}
+		public int getJumlahPintu() {
+			return jumlahPintu;
+		}
+		public void setJumlahPintu(int jumlahPintu) {
+			this.jumlahPintu = jumlahPintu;
+		}
+		public int getJumlahJendela() {
+			return jumlahJendela;
+		}
+		public void setJumlahJendela(int jumlahJendela) {
+			this.jumlahJendela = jumlahJendela;
+		}
+		
+		
+		public int hitungLuasRuang(int panjang, int lebar){
+			return panjang*lebar;
+		}
+		
+		public String hitungBentukRuang(int panjang, int lebar){
+			if(panjang!=lebar){
+				return "sesuai";
+			}
+			else{
+				return "tidak sesuai";
+			}
+		}
+		
+		
+		public String hitungRasioLuas(int luas, int kursi){
+			if((luas/kursi)>=0.5){
+				return "sesuai";
+			}
+			else{
+				return "tidak sesuai";
+			}
+			
+		}
+		
+		
+		
+		public String analisisPintuJendela(int pintu, int jendela){
+			if(pintu>=1&&jendela>=2){
+				return "sesuai";
+			}
+			else{
+				return "tidak sesuai";
+			}
+		}
+		
+		
+		
+
+	
+	/*private int Panjangruang;
+	private int Lebarruang;
+	private int Jumlahkursi;
+	private int jumlahpintu;
+	private int Jumlahjendela;
+	
+	
+	
+	
+	
+	public int getPanjangruang() {
+		return Panjangruang;
+	}
+
+	public void setPanjangruang(int panjangruang) {
+		Panjangruang = panjangruang;
+	}
+
+	public int getLebarruang() {
+		return Lebarruang;
+	}
+
+	public void setLebarruang(int lebarruang) {
+		Lebarruang = lebarruang;
+	}
+
+	public int getJumlahkursi() {
+		return Jumlahkursi;
+	}
+
+	public void setJumlahkursi(int jumlahkursi) {
+		Jumlahkursi = jumlahkursi;
+	}
+
+	public int getJumlahpintu() {
+		return jumlahpintu;
+	}
+
+	public void setJumlahpintu(int jumlahpintu) {
+		this.jumlahpintu = jumlahpintu;
+	}
+
+	public int getJumlahjendela() {
+		return Jumlahjendela;
+	}
+
+	public void setJumlahjendela(int jumlahjendela) {
+		Jumlahjendela = jumlahjendela;
+	}
+
+	/*public int getTotSesuai() {
+		return totSesuai;
+	}
+
+	public void setTotSesuai(int totSesuai) {
+		this.totSesuai = totSesuai;
+	}
+
+	public int getSesuai() {
+		return sesuai;
+	}
+
+	public void setSesuai(int sesuai) {
+		this.sesuai = sesuai;
+	}
+
+	public Scanner getInput() {
+		return input;
+	}
+
+	public void setInput(Scanner input) {
+		this.input = input;
+	}
+
+	int totSesuai = 0;
+	int sesuai = 0;
+
+	public HitungRuang() {
+	}
+
+	Scanner input = new Scanner(System.in);
+
+	/*void inputHitungRuang() {
+		System.out.println("Panjang Ruang : ");
+		setPanjangruang(input.nextInt());
+		System.out.println("Lebar Ruang : ");
+		setLebarruang(input.nextInt());
+		System.out.println("Jumlah Kursi : ");
+		setJumlahkursi(input.nextInt());
+		System.out.println("Jumlah pintu : ");
+		setJumlahpintu(input.nextInt());
+		System.out.println("Jumlah Jendela : ");
+		setJumlahjendela(input.nextInt());
+	}
+
+	double luasruang() {
+		return getPanjangruang() * getLebarruang();
+	}
+
+	public String Bentukruang(int panjang, int lebar) {
+		//String bentuk;
+		if (panjang==lebar) {
+			//bentuk = "Bukan Persegi panjang";
+			return ("Bentuk Ruang: TIDAK SESUAI");
+		} else {
+			//bentuk = "Persegi panjang";
+			//System.out.println("Bentuk: " + bentuk);
+			//totSesuai++;
+			return ("Bentuk ruang: SESUAI");
+		}
+
+	}
+
+	String rasioluas(int luas,int jumlahkursi) {
+		//double hasilrasio;
+		double hasilrasio = luas / jumlahkursi;
+		if (hasilrasio >= 0.5) {
+			//totSesuai++;
+			return ("Rasio Luas : Sesuai");
+		} else {
+			//System.out.println("Rasio luas: TIDAK SESUAI\n");
+		
+		return ("Rasio Luas : Tidak Sesuai");
+		}
+	}
+
+	String analisispinjen(int Jumlahpintu,int JumlahJendela) {
+		//sesuai = 0;
+		if (Jumlahpintu >= 2&&(JumlahJendela)>=1) {
+			//System.out.println("Jumlah pintu SESUAI");
+			return ("sesuai");
+		} else {
+			//System.out.println("Jumalah pintu TIDAK SESUAI");
+			return("tidak sesuai");
+		}
+		if (getJumlahjendela() >= 1) {
+			System.out.println("Jumlah jendela SESUAI");
+			sesuai++;
+		} else {
+			System.out.println("Jumlah jendela TIDAK SESUAI");
+		}
+		if (sesuai == 2) {
+			totSesuai++;
+			return ("Analisis pintu dan jendela: SESUAI\n");
+		} else {
+			return ("Analisis Pintu dan Jendela: TIDAK SESUAI\n");
+		}*/
+	//}
+/*
+	String analisisRuangDanSarana() {
+		return null;
+		// TODO Auto-generated method stub
+
+	}
+
+	void inputKondisiRuangDanSarana() {
+		// TODO Auto-generated method stub
+
+	}
+
+	String analisisLCD() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisLampu() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisKipasAngin() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisAC() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisInternet() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisCCTV() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisSirkulasiUdara() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisKebersihan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisPencahayaan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisKelembapan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisSuhu() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisKebisingan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisBau() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisKebocoran() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisKerusakan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisKeausan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisKekokohan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisKunciPintu() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisKunciJendela() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	String analisisKeamanan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	void cetak() {
+		System.out.println("---HASIL ANALISIS CONTROL---");
+		System.out.println("" + Bentukruang(getPanjangruang(), getLebarruang()));
+		System.out.println("" + rasioluas());
+		System.out.println("" + analisispinjen());
+	}
+
+	void cetakSarana() {
+		// TODO Auto-generated method stub
+
+	}
+
+	void cetakKebersihan() {
+		// TODO Auto-generated method stub
+
+	}
+
+	void cetakLinkungan() {
+		// TODO Auto-generated method stub
+
+	}
+
+	void cetakKeamanan() {
+		// TODO Auto-generated method stub
+
+	}
+
+	void cetakKenyamanan() {
+		// TODO Auto-generated method stub
+
+	}
+/*
+	@Override
+	void cetakidentitas() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/*
+	 * public void outputHitungRuang() { SG.setLuasruang(SG.getPanjangruang() *
+	 * SG.getLebarruang()); System.out.println("Luas Ruangan Kelas :\n" +
+	 * SG.getLuasruang()); if (SG.getPanjangruang() == SG.getLebarruang()) {
+	 * System.out.println("Ruangan Berbentuk Persegi\n "); } else {
+	 * System.out.println("Ruangan Berbentuk Persegi Panjang\n"); }
+	 * SG.setRasioluas(SG.getLuasruang()/SG.getJumlahkursi());
+	 * System.out.println("Rasio Kelas :\n"+SG.getRasioluas());//jawaban tidak
+	 * logis if (SG.getRasioluas() >= 0.5) {//salah rumus harusnya separuh dari
+	 * ruangan kelas dibagi kursi sesuai
+	 * System.out.println("Rasio Kelas Sesuai\n "); } else {
+	 * System.out.println("Rasio Kelas Tidak Sesuai\n "); }
+	 * System.out.println("Jumlah Pintu :\n" + SG.getJumlahpintu()); if
+	 * (SG.getJumlahpintu() >= 2) { System.out.println("Jumlah Pintu Sesuai\n");
+	 * 
+	 * } else { System.out.println("Jumlah Pintu Tidak Sesuai\n "); }
+	 * System.out.println("Jumlah Jendela :\n" + SG.getJumlahjendela()); if
+	 * (SG.getJumlahjendela() >= 1) {
+	 * System.out.println("Jumlah Jendela Sesuai\n ");
+	 * 
+	 * } else { System.out.println("Jumlah Jendela Tidak Sesuai\n "); }
+	 * 
+	 * }
+	 */
+
+}
