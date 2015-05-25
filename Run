@@ -1,11 +1,12 @@
 
-public class Run {
 
-	public static void main(String[] args) {
-			identitas ID =new identitas();
-			ID.inputidentitas();
-			}
+	public class Run {
+		
+		public static void main(String [] args){
+			
+			inputan inp = new inputan();
+			inp.jalan();
+			new Output();
+		}
 
 	}
-
-
