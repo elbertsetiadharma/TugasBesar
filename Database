@@ -1,0 +1,224 @@
+/*
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.Scanner;
+
+public class Database implements Serializable{
+
+    int banyakRuang = 1;
+    ControlKelas[] c = new ControlKelas[banyakRuang];
+    HitungKondisiDanSarana[] HKDS = new HitungKondisiDanSarana[banyakRuang];
+    KebersihanKelas[] KK = new KebersihanKelas[banyakRuang];
+    HitungLingkunganRuangKelas[] HLRK = new HitungLingkunganRuangKelas[banyakRuang];
+    KenyamananKelas[] KKelas = new KenyamananKelas[banyakRuang];
+    KeamananRuangKelas[]KRK = new KeamananRuangKelas[banyakRuang];
+
+    public Database() {
+        for (int x = 0; x < banyakRuang; x++) {
+            c[x] = new ControlKelas();
+            HKDS[x] = new Sarana();
+            b[x] = new Kebersihan();
+            l[x] = new Lingkungan();
+            k[x] = new Kenyamanan();
+            a[x] = new Keamanan();
+        }
+    }
+
+    public static void (String[] Database) {
+        
+        Scanner in = new Scanner(System.in);
+        //RuangKelas r=new RuangKelas("123", "GKB 1", "PBO Java");
+        Database D = new Database();
+        
+        try{
+            ObjectInputStream is= new ObjectInputStream(new FileInputStream("data.ser"));
+            D= (Database)is.readObject();
+            is.close();
+            for(int x=0; x< D.banyakRuang; x++){
+            D.c[x].cetak();
+                //s[x].cetaDarana();
+                D.s[x].cetak();
+                D.b[x].cetakKebersihan();
+                D.l[x].cetakLinkungan();
+                D.k[x].cetakKenyamanan();
+                D.a[x].cetakKeamanan();
+        }
+        }
+        catch(Exception e){
+            System.out.println("Belum ada data");
+        }
+        
+        
+        
+        for (int x = 0; x < D.banyakRuang; x++) {
+            D.c[x].data(null, null, null);
+            //c[x].inputData();
+            D.c[x].hitungLuasRuang();
+            D.c[x].hitungBentukRuang();
+            D.c[x].inputKursi();
+            D.c[x].hitungRasioLuas();
+            D.c[x].inputPintuDanJendela();
+            D.c[x].analisisPintuDanJendela();
+
+            D.s[x].inputKelistrikan();
+            D.s[x].analisisKelistrikan();
+            D.s[x].inputLCD();
+            D.s[x].analisisLCD();
+            D.s[x].inputLampu();
+            D.s[x].analisisLampu();
+            D.s[x].inputKipasAngin();
+            D.s[x].analisisKipasAngin();
+            D.s[x].inputAC();
+            D.s[x].analisisAC();
+            D.s[x].inputInternet();
+            D.s[x].analisisInternet();
+            D.s[x].inputCCTV();
+            D.s[x].analisisCCTV();
+            D.b[x].inputKebersihan();
+
+            D.b[x].analisisKebersihan();
+            D.l[x].inputSirkulasiUdara();
+            D.l[x].analisisSirkulasiUdara();
+            D.l[x].inputPencahayaan();
+            D.l[x].analisisPencahayaan();
+            D.l[x].inputKelembapan();
+            D.l[x].analisisKelembapan();
+            D.l[x].inputSuhu();
+            D.l[x].analisisSuhu();
+
+            D.k[x].inputKebisingan();
+            D.k[x].analisisKebisingan();
+            D.k[x].inputBau();
+            D.k[x].analisisBau();
+            D.k[x].inputKebocoran();
+            D.k[x].analisisKebocoran();
+            D.k[x].inputKerusakan();
+            D.k[x].analisisKerusakan();
+            D.k[x].inputKeausan();
+            D.k[x].analisisKeausan();
+
+            String edit = "y";
+            while (edit.equals("y")) {
+                D.a[x].inputKekokohan();
+                D.a[x].analisisKekokohan();
+                D.a[x].inputKunciPintu();
+                D.a[x].analisisKunciPintu();
+                D.a[x].inputKunciJendela();
+                D.a[x].analisisKunciJendela();
+                D.a[x].inputKeamanan();
+                D.a[x].analisisKeamanan();
+
+                System.out.println("edit (y/n): ");
+                edit = in.nextLine();
+                D.c[x].inputBelajar();
+                D.c[x].analisisBelajar();
+                //c[x].cetakControl();
+                D.c[x].cetak();
+                //s[x].cetaDarana();
+                D.s[x].cetak();
+                D.b[x].cetakKebersihan();
+                D.l[x].cetakLinkungan();
+                D.k[x].cetakKenyamanan();
+                D.a[x].cetakKeamanan();
+
+            }
+
+        }
+        try{
+            ObjectOutputStream os= new ObjectOutputStream(new FileOutputStream("data.ser"));
+            os.writeObject(D);
+            os.close();
+        }
+        catch(Exception e){
+            System.out.println("Belum ada data");
+            e.printStackTrace();
+        }
+    }
+}*/
+import java.io.*;
+
+import javax.swing.JOptionPane;
+
+
+public class Database {
+	
+	
+	
+	public static void simpanKondisi(HitungKondisiDanSarana dat){
+		try {
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("datakondisi.dat"));
+			oos.writeObject(dat);
+			oos.close();
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, e);
+		}
+		
+	}
+	
+	public static HitungKondisiDanSarana bacaKondisi(){
+		HitungKondisiDanSarana dat=null;
+		
+		try {
+			ObjectInputStream ois = new ObjectInputStream(new FileInputStream("datakondisi.dat"));
+			dat = (HitungKondisiDanSarana)ois.readObject();
+			ois.close();
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, e);
+		}
+		
+		return dat;
+	}	
+	
+	public static void simpanBersih(KebersihanKelas dat){
+		try {
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("databersih.dat"));
+			oos.writeObject(dat);
+			oos.close();
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, e);
+		}
+		
+	}
+	
+	public static KebersihanKelas bacaBersih(){
+		KebersihanKelas dat=null;
+		
+		try {
+			ObjectInputStream ois = new ObjectInputStream(new FileInputStream("databersih.dat"));
+			dat = (KebersihanKelas)ois.readObject();
+			ois.close();
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, e);
+		}
+		
+		return dat;
+	}	
+	
+	public static void simpanKeamanan(KeamananRuangKelas dat){
+		try {
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("datakeamanan.dat"));
+			oos.writeObject(dat);
+			oos.close();
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, e);
+		}
+		
+	}
+	
+	public static KeamananRuangKelas bacaKeamanan(){
+		KeamananRuangKelas dat=null;
+		
+		try {
+			ObjectInputStream ois = new ObjectInputStream(new FileInputStream("datakeamanan.dat"));
+			dat = (KeamananRuangKelas)ois.readObject();
+			ois.close();
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, e);
+		}
+		
+		return dat;
+	}	
+}
