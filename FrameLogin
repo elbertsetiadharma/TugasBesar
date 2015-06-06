@@ -1,0 +1,56 @@
+import javax.swing.JPanel;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+
+
+public class FrameLogin extends JPanel {
+	private JTextField textField;
+	private JTextField textField_1;
+
+	/**
+	 * Create the panel.
+	 */
+	public FrameLogin() {
+		setBackground(Color.LIGHT_GRAY);
+		setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(10, 11, 493, 350);
+		add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblIdUsername = new JLabel("ID / USERNAME");
+		lblIdUsername.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		lblIdUsername.setBounds(10, 52, 149, 43);
+		panel.add(lblIdUsername);
+		
+		JLabel lblPassword = new JLabel("PASSWORD");
+		lblPassword.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		lblPassword.setBounds(10, 113, 129, 43);
+		panel.add(lblPassword);
+		
+		textField = new JTextField();
+		textField.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		textField.setBounds(186, 52, 203, 43);
+		panel.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		textField_1.setBounds(186, 113, 203, 43);
+		panel.add(textField_1);
+		textField_1.setColumns(10);
+		
+		
+		
+		JLabel lblIniDoomKecil = new JLabel("ini Doom kecil kecil");
+		lblIniDoomKecil.setFont(new Font("Tahoma", Font.PLAIN, 7));
+		lblIniDoomKecil.setBounds(10, 325, 93, 14);
+		panel.add(lblIniDoomKecil);
+
+	}
+
+}
