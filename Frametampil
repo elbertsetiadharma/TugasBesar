@@ -1,0 +1,202 @@
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+
+
+public class Frametampil extends JPanel {
+
+	/**
+	 * Create the panel.
+	 */
+	public Frametampil() {
+		setLayout(null);
+		
+		JLabel lblBentukRuang = new JLabel("Bentuk Ruang");
+		lblBentukRuang.setBounds(24, 25, 92, 19);
+		add(lblBentukRuang);
+		
+		JLabel lblRasio = new JLabel("Rasio");
+		lblRasio.setBounds(24, 48, 69, 14);
+		add(lblRasio);
+		
+		JLabel lblPintuDanJendela = new JLabel("Pintu dan Jendela");
+		lblPintuDanJendela.setBounds(24, 73, 106, 14);
+		add(lblPintuDanJendela);
+		
+		JLabel lblKelistrikan = new JLabel("Kelistrikan");
+		lblKelistrikan.setBounds(24, 121, 92, 14);
+		add(lblKelistrikan);
+		
+		JLabel lblNewLabel = new JLabel("LCD");
+		lblNewLabel.setBounds(24, 146, 46, 14);
+		add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("_____________________");
+		lblNewLabel_1.setBounds(24, 98, 134, 14);
+		add(lblNewLabel_1);
+		
+		JLabel lblLampu = new JLabel("Lampu");
+		lblLampu.setBounds(24, 169, 46, 14);
+		add(lblLampu);
+		
+		JLabel lblKipasAngin = new JLabel("Kipas Angin");
+		lblKipasAngin.setBounds(24, 194, 92, 14);
+		add(lblKipasAngin);
+		
+		JLabel lblAc = new JLabel("AC");
+		lblAc.setBounds(24, 219, 46, 14);
+		add(lblAc);
+		
+		JLabel lblInternet = new JLabel("Internet");
+		lblInternet.setBounds(24, 244, 46, 14);
+		add(lblInternet);
+		
+		JLabel lblCctv = new JLabel("CCTV");
+		lblCctv.setBounds(24, 269, 46, 14);
+		add(lblCctv);
+		
+		JLabel label = new JLabel("____________________");
+		label.setBounds(24, 294, 134, 14);
+		add(label);
+		
+		JLabel lblSirkulasiUdara = new JLabel("Sirkulasi Udara");
+		lblSirkulasiUdara.setBounds(24, 323, 106, 14);
+		add(lblSirkulasiUdara);
+		
+		JLabel lblPencahayaan = new JLabel("Pencahayaan");
+		lblPencahayaan.setBounds(24, 348, 92, 14);
+		add(lblPencahayaan);
+		
+		JLabel lblKelembapan = new JLabel("Kelembapan");
+		lblKelembapan.setBounds(24, 373, 92, 14);
+		add(lblKelembapan);
+		
+		JLabel lblSuhu = new JLabel("Suhu");
+		lblSuhu.setBounds(24, 398, 69, 14);
+		add(lblSuhu);
+		
+		JLabel lblHasilBentukRuang = new JLabel("Hasil bentuk ruang");
+		lblHasilBentukRuang.setBounds(166, 27, 123, 14);
+		add(lblHasilBentukRuang);
+		
+		JLabel lblHasilRasio = new JLabel("Hasil rasio");
+		lblHasilRasio.setBounds(166, 48, 86, 14);
+		add(lblHasilRasio);
+		
+		JLabel lblHasilPintuJendela = new JLabel("Hasil pintu jendela");
+		lblHasilPintuJendela.setBounds(166, 73, 106, 14);
+		add(lblHasilPintuJendela);
+		
+		JLabel lblHasilListrik = new JLabel("Hasil Listrik");
+		lblHasilListrik.setBounds(166, 121, 86, 14);
+		add(lblHasilListrik);
+		
+		JLabel lblHasilLcd = new JLabel("Hasil LCD");
+		lblHasilLcd.setBounds(166, 146, 86, 14);
+		add(lblHasilLcd);
+		
+		JLabel lblHasilLampu = new JLabel("Hasil Lampu");
+		lblHasilLampu.setBounds(166, 169, 86, 14);
+		add(lblHasilLampu);
+		
+		JLabel lblHasilKipas = new JLabel("Hasil Kipas");
+		lblHasilKipas.setBounds(166, 194, 69, 14);
+		add(lblHasilKipas);
+		
+		JLabel lblHasilAc = new JLabel("Hasil AC");
+		lblHasilAc.setBounds(166, 219, 46, 14);
+		add(lblHasilAc);
+		
+		JLabel lblHasilInternet = new JLabel("Hasil Internet");
+		lblHasilInternet.setBounds(166, 244, 86, 14);
+		add(lblHasilInternet);
+		
+		JLabel lblHasilVvtv = new JLabel("Hasil cctv");
+		lblHasilVvtv.setBounds(166, 269, 69, 14);
+		add(lblHasilVvtv);
+		
+		JLabel lblHasilSirkulasi = new JLabel("Hasil sirkulasi");
+		lblHasilSirkulasi.setBounds(166, 323, 86, 14);
+		add(lblHasilSirkulasi);
+		
+		JLabel lblHasilCahaya = new JLabel("Hasil cahaya");
+		lblHasilCahaya.setBounds(166, 348, 69, 14);
+		add(lblHasilCahaya);
+		
+		JLabel lblHasilLembab = new JLabel("Hasil Lembab");
+		lblHasilLembab.setBounds(166, 373, 69, 14);
+		add(lblHasilLembab);
+		
+		JLabel lblHasilSuhu = new JLabel("Hasil Suhu");
+		lblHasilSuhu.setBounds(166, 398, 69, 14);
+		add(lblHasilSuhu);
+		
+		JLabel lblKebisingan = new JLabel("Kebisingan");
+		lblKebisingan.setBounds(343, 27, 74, 14);
+		add(lblKebisingan);
+		
+		JLabel lblBau = new JLabel("Bau");
+		lblBau.setBounds(343, 48, 46, 14);
+		add(lblBau);
+		
+		JLabel lblKebocoran = new JLabel("Kebocoran");
+		lblKebocoran.setBounds(343, 73, 74, 14);
+		add(lblKebocoran);
+		
+		JLabel lblKerusakan = new JLabel("Kerusakan");
+		lblKerusakan.setBounds(343, 98, 74, 14);
+		add(lblKerusakan);
+		
+		JLabel lblKeausan = new JLabel("Keausan");
+		lblKeausan.setBounds(343, 121, 74, 14);
+		add(lblKeausan);
+		
+		JLabel label_1 = new JLabel("______________________________");
+		label_1.setBounds(343, 146, 180, 14);
+		add(label_1);
+		
+		JLabel lblKekokohan = new JLabel("Kekokohan");
+		lblKekokohan.setBounds(343, 169, 74, 14);
+		add(lblKekokohan);
+		
+		JLabel lblKunciPintuDan = new JLabel("Kunci Pintu dan Jendela");
+		lblKunciPintuDan.setBounds(343, 194, 143, 14);
+		add(lblKunciPintuDan);
+		
+		JLabel lblKeamanan = new JLabel("Keamanan");
+		lblKeamanan.setBounds(343, 219, 74, 14);
+		add(lblKeamanan);
+		
+		JLabel lblHasilBising = new JLabel("Hasil bising");
+		lblHasilBising.setBounds(499, 27, 92, 14);
+		add(lblHasilBising);
+		
+		JLabel lblHasilBau = new JLabel("Hasil bau");
+		lblHasilBau.setBounds(499, 48, 69, 14);
+		add(lblHasilBau);
+		
+		JLabel lblHasilBocor = new JLabel("Hasil bocor");
+		lblHasilBocor.setBounds(499, 73, 80, 14);
+		add(lblHasilBocor);
+		
+		JLabel lblHasilRusak = new JLabel("Hasil rusak");
+		lblHasilRusak.setBounds(499, 98, 69, 14);
+		add(lblHasilRusak);
+		
+		JLabel lblHasilAus = new JLabel("Hasil aus");
+		lblHasilAus.setBounds(499, 121, 69, 14);
+		add(lblHasilAus);
+		
+		JLabel lblHasilKokoh = new JLabel("Hasil kokoh");
+		lblHasilKokoh.setBounds(499, 169, 80, 14);
+		add(lblHasilKokoh);
+		
+		JLabel lblHasillKunci = new JLabel("Hasill kunci");
+		lblHasillKunci.setBounds(496, 194, 72, 14);
+		add(lblHasillKunci);
+		
+		JLabel lblHasilKeamanan = new JLabel("Hasil keamanan");
+		lblHasilKeamanan.setBounds(499, 219, 92, 14);
+		add(lblHasilKeamanan);
+
+	}
+}
