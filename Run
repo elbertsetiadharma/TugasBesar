@@ -5,7 +5,7 @@
 		public static void main(String [] args){
 			
 			inputan inp = new inputan();
-			inp.jalan();
+			inp.Pilihan();
 			new Output();
 		}
 
