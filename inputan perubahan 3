@@ -191,8 +191,64 @@ public class inputan {
 			}
 		}
 
+		Database.simpanKondisi(kondisi);
+		Database.simpanBersih(bersih);
+		Database.simpanKeamanan(keamananan);
 		System.out.println("Selesai");
+		Pilihan();
 
+	}
+
+	void baca() {
+		kondisi = Database.bacaKondisi();
+		bersih = Database.bacaBersih();
+		keamananan = Database.bacaKeamanan();
+
+	}
+
+	void tampil() {
+		System.out.println(kondisi.getInputBandwidth());
+		System.out.println(kondisi.getFakultas());
+		System.out.println(kondisi.getJumlahAc());
+		System.out.println(kondisi.getJumlahCctv());
+		System.out.println(kondisi.getJumlahJendela());
+		System.out.println(kondisi.getJumlahKabelLcd());
+		System.out.println(kondisi.getJumlahKipasAngin());
+		System.out.println(kondisi.getJumlahKursi());
+		System.out.println(kondisi.getJumlahLampu());
+		System.out.println(kondisi.getJumlahPintu());
+		System.out.println(kondisi.getJumlahStopkontak());
+		System.out.println(kondisi.getKondisiAc());
+		System.out.println(kondisi.getKondisiCctv());
+		System.out.println(kondisi.getKondisiKabelLcd());
+		System.out.println(kondisi.getKondisiKipasAngin());
+		System.out.println(kondisi.getKondisiLampu());
+		System.out.println(kondisi.getKondisiStopKontak());
+		//System.out.println(kondisi);
+		//System.out.println(bersih.getFakultas());
+		System.out.println(bersih.getBau());
+		System.out.println(keamananan.getBahaya());
+	}
+
+	void Pilihan() {
+		int pilihan;
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("1.input 2.tampil 3.edit");
+		pilihan = input.nextInt();
+		switch (pilihan) {
+		case 1:
+			jalan();
+			break;
+		case 2:
+			baca();
+			tampil();
+			break;
+		case 3:
+			baca ();
+			jalan();
+			break;
+		}
 	}
 
 	public static HitungKondisiDanSarana kelasKondisi() {
