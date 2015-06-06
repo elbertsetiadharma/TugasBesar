@@ -1,6 +1,6 @@
 //import java.util.Scanner;
 
- public abstract class identitas {
+ public abstract class identitas implements serializable{
 	 
 	 	private String nama;
 		private String lokasi;
