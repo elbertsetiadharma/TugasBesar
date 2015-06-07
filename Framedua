@@ -7,13 +7,49 @@ import javax.swing.JButton;
 
 
 public class Framedua extends JPanel {
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
+	 JTextField NilaiPencahayaan;
+	 JTextField NilaiKelembapan;
+	 JTextField NilaiSuhu;
 
 	/**
 	 * Create the panel.
 	 */
+	 JRadioButton StekerPosisiYes = new JRadioButton("1");
+	 JRadioButton KabelPosisiYes = new JRadioButton("1");
+	 JRadioButton LampuPosisiYes = new JRadioButton("1");
+	 JRadioButton KipasPosisiYes = new JRadioButton("1");
+	 JRadioButton AcPosisiYes = new JRadioButton("1");
+	 JRadioButton CctvPosisiYes = new JRadioButton("1");
+	 JRadioButton StekerPosisiNo = new JRadioButton("0");
+	 JRadioButton KabelPosisiNo = new JRadioButton("0");
+	 JRadioButton LampuPosisiNo = new JRadioButton("0");
+	 JRadioButton KipasPosisiNo = new JRadioButton("0");
+	 JRadioButton AcPosisiNo = new JRadioButton("0");
+	 JRadioButton CctvPosisiNo = new JRadioButton("0");
+	 
+	 JRadioButton KokohSesuai = new JRadioButton("Sesuai");
+	 JRadioButton KebisinganYes = new JRadioButton("Sesuai");
+	 JRadioButton BauYes = new JRadioButton("Sesuai");
+	 JRadioButton KunciPintuSesuai = new JRadioButton("Sesuai");
+	 JRadioButton KunciJendelaSesuai = new JRadioButton("Sesuai");
+	 JRadioButton KebocoranYes = new JRadioButton("Sesuai");
+	 JRadioButton BahayaSesuai = new JRadioButton("Sesuai");
+	 JRadioButton KerusakanYes = new JRadioButton("Sesuai");
+	 JRadioButton KeausanYes = new JRadioButton("Sesuai");
+	 JRadioButton KerusakanNo = new JRadioButton("Tidak Sesuai");
+	 JRadioButton KebocoranNo = new JRadioButton("Tidak Sesuai");
+	 JRadioButton BauNo = new JRadioButton("Tidak Sesuai");
+	 JRadioButton KebisinganNo = new JRadioButton("Tidak Sesuai");
+	 JRadioButton KokohTidakSesuai = new JRadioButton("Tidak Sesuai");
+	 JRadioButton KncPintuTidakSesuai = new JRadioButton("Tidak Sesuai");
+	 JRadioButton KncJendelaTidakSesuai = new JRadioButton("Tidak Sesuai");
+	 JRadioButton BahayaTidakSesuai = new JRadioButton("Tidak Sesuai");
+	 JRadioButton SirkulasiTidakAda = new JRadioButton("Tidak Sesuai");
+	 JRadioButton KeausanNo = new JRadioButton("Tidak Sesuai");
+	 JRadioButton SirkulasiAda = new JRadioButton("Ada");
+	 
+	 
+	 
 	public Framedua() {
 		setLayout(null);
 		
@@ -47,65 +83,65 @@ public class Framedua extends JPanel {
 		lblNewLabel_5.setBounds(10, 137, 46, 14);
 		panel.add(lblNewLabel_5);
 		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("1");
-		rdbtnNewRadioButton.setBackground(Color.CYAN);
-		rdbtnNewRadioButton.setBounds(97, 7, 38, 23);
-		panel.add(rdbtnNewRadioButton);
 		
-		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("1");
-		rdbtnNewRadioButton_1.setBackground(Color.CYAN);
-		rdbtnNewRadioButton_1.setBounds(97, 32, 38, 23);
-		panel.add(rdbtnNewRadioButton_1);
+		StekerPosisiYes.setBackground(Color.CYAN);
+		StekerPosisiYes.setBounds(97, 7, 38, 23);
+		panel.add(StekerPosisiYes);
 		
-		JRadioButton radioButton = new JRadioButton("1");
-		radioButton.setBackground(Color.CYAN);
-		radioButton.setBounds(97, 57, 38, 23);
-		panel.add(radioButton);
 		
-		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("1");
-		rdbtnNewRadioButton_2.setBackground(Color.CYAN);
-		rdbtnNewRadioButton_2.setBounds(97, 82, 38, 23);
-		panel.add(rdbtnNewRadioButton_2);
+		KabelPosisiYes.setBackground(Color.CYAN);
+		KabelPosisiYes.setBounds(97, 32, 38, 23);
+		panel.add(KabelPosisiYes);
 		
-		JRadioButton radioButton_1 = new JRadioButton("1");
-		radioButton_1.setBackground(Color.CYAN);
-		radioButton_1.setBounds(97, 107, 38, 23);
-		panel.add(radioButton_1);
 		
-		JRadioButton rdbtnNewRadioButton_3 = new JRadioButton("1");
-		rdbtnNewRadioButton_3.setBackground(Color.CYAN);
-		rdbtnNewRadioButton_3.setBounds(97, 133, 38, 23);
-		panel.add(rdbtnNewRadioButton_3);
+		LampuPosisiYes.setBackground(Color.CYAN);
+		LampuPosisiYes.setBounds(97, 57, 38, 23);
+		panel.add(LampuPosisiYes);
 		
-		JRadioButton radioButton_2 = new JRadioButton("0");
-		radioButton_2.setBackground(Color.CYAN);
-		radioButton_2.setBounds(149, 7, 38, 23);
-		panel.add(radioButton_2);
 		
-		JRadioButton radioButton_3 = new JRadioButton("0");
-		radioButton_3.setBackground(Color.CYAN);
-		radioButton_3.setBounds(149, 32, 38, 23);
-		panel.add(radioButton_3);
+		KipasPosisiYes.setBackground(Color.CYAN);
+		KipasPosisiYes.setBounds(97, 82, 38, 23);
+		panel.add(KipasPosisiYes);
 		
-		JRadioButton radioButton_4 = new JRadioButton("0");
-		radioButton_4.setBackground(Color.CYAN);
-		radioButton_4.setBounds(149, 57, 38, 23);
-		panel.add(radioButton_4);
 		
-		JRadioButton radioButton_5 = new JRadioButton("0");
-		radioButton_5.setBackground(Color.CYAN);
-		radioButton_5.setBounds(149, 82, 38, 23);
-		panel.add(radioButton_5);
+		AcPosisiYes.setBackground(Color.CYAN);
+		AcPosisiYes.setBounds(97, 107, 38, 23);
+		panel.add(AcPosisiYes);
 		
-		JRadioButton radioButton_6 = new JRadioButton("0");
-		radioButton_6.setBackground(Color.CYAN);
-		radioButton_6.setBounds(149, 107, 38, 23);
-		panel.add(radioButton_6);
 		
-		JRadioButton radioButton_7 = new JRadioButton("0");
-		radioButton_7.setBackground(Color.CYAN);
-		radioButton_7.setBounds(149, 133, 38, 23);
-		panel.add(radioButton_7);
+		CctvPosisiYes.setBackground(Color.CYAN);
+		CctvPosisiYes.setBounds(97, 133, 38, 23);
+		panel.add(CctvPosisiYes);
+		
+		
+		StekerPosisiNo.setBackground(Color.CYAN);
+		StekerPosisiNo.setBounds(149, 7, 38, 23);
+		panel.add(StekerPosisiNo);
+		
+		
+		KabelPosisiNo.setBackground(Color.CYAN);
+		KabelPosisiNo.setBounds(149, 32, 38, 23);
+		panel.add(KabelPosisiNo);
+		
+		
+		LampuPosisiNo.setBackground(Color.CYAN);
+		LampuPosisiNo.setBounds(149, 57, 38, 23);
+		panel.add(LampuPosisiNo);
+		
+		
+		KipasPosisiNo.setBackground(Color.CYAN);
+		KipasPosisiNo.setBounds(149, 82, 38, 23);
+		panel.add(KipasPosisiNo);
+		
+		
+		AcPosisiNo.setBackground(Color.CYAN);
+		AcPosisiNo.setBounds(149, 107, 38, 23);
+		panel.add(AcPosisiNo);
+		
+		
+		CctvPosisiNo.setBackground(Color.CYAN);
+		CctvPosisiNo.setBounds(149, 133, 38, 23);
+		panel.add(CctvPosisiNo);
 		
 		JLabel lblKeterangan = new JLabel("Keterangan : ");
 		lblKeterangan.setBounds(10, 177, 86, 14);
@@ -145,45 +181,45 @@ public class Framedua extends JPanel {
 		lblBahaya.setBounds(10, 132, 46, 14);
 		panel_1.add(lblBahaya);
 		
-		JRadioButton rdbtnSesuai = new JRadioButton("Sesuai");
-		rdbtnSesuai.setBackground(Color.GREEN);
-		rdbtnSesuai.setBounds(114, 24, 91, 23);
-		panel_1.add(rdbtnSesuai);
 		
-		JRadioButton rdbtnSesuai_1 = new JRadioButton("Sesuai");
-		rdbtnSesuai_1.setBackground(Color.GREEN);
-		rdbtnSesuai_1.setBounds(114, 59, 91, 23);
-		panel_1.add(rdbtnSesuai_1);
+		KokohSesuai.setBackground(Color.GREEN);
+		KokohSesuai.setBounds(114, 24, 91, 23);
+		panel_1.add(KokohSesuai);
 		
-		JRadioButton rdbtnNewRadioButton_4 = new JRadioButton("Sesuai");
-		rdbtnNewRadioButton_4.setBackground(Color.GREEN);
-		rdbtnNewRadioButton_4.setBounds(114, 93, 91, 23);
-		panel_1.add(rdbtnNewRadioButton_4);
 		
-		JRadioButton rdbtnSesuai_2 = new JRadioButton("Sesuai");
-		rdbtnSesuai_2.setBackground(Color.GREEN);
-		rdbtnSesuai_2.setBounds(114, 128, 91, 23);
-		panel_1.add(rdbtnSesuai_2);
+		KunciPintuSesuai.setBackground(Color.GREEN);
+		KunciPintuSesuai.setBounds(114, 59, 91, 23);
+		panel_1.add(KunciPintuSesuai);
 		
-		JRadioButton rdbtnNewRadioButton_5 = new JRadioButton("Tidak Sesuai");
-		rdbtnNewRadioButton_5.setBackground(Color.GREEN);
-		rdbtnNewRadioButton_5.setBounds(222, 24, 109, 23);
-		panel_1.add(rdbtnNewRadioButton_5);
 		
-		JRadioButton rdbtnNewRadioButton_6 = new JRadioButton("Tidak Sesuai");
-		rdbtnNewRadioButton_6.setBackground(Color.GREEN);
-		rdbtnNewRadioButton_6.setBounds(222, 59, 109, 23);
-		panel_1.add(rdbtnNewRadioButton_6);
+		KunciJendelaSesuai.setBackground(Color.GREEN);
+		KunciJendelaSesuai.setBounds(114, 93, 91, 23);
+		panel_1.add(KunciJendelaSesuai);
 		
-		JRadioButton rdbtnNewRadioButton_7 = new JRadioButton("Tidak Sesuai");
-		rdbtnNewRadioButton_7.setBackground(Color.GREEN);
-		rdbtnNewRadioButton_7.setBounds(222, 93, 109, 23);
-		panel_1.add(rdbtnNewRadioButton_7);
 		
-		JRadioButton rdbtnNewRadioButton_8 = new JRadioButton("Tidak Sesuai");
-		rdbtnNewRadioButton_8.setBackground(Color.GREEN);
-		rdbtnNewRadioButton_8.setBounds(222, 128, 109, 23);
-		panel_1.add(rdbtnNewRadioButton_8);
+		BahayaSesuai.setBackground(Color.GREEN);
+		BahayaSesuai.setBounds(114, 128, 91, 23);
+		panel_1.add(BahayaSesuai);
+		
+		
+		KokohTidakSesuai.setBackground(Color.GREEN);
+		KokohTidakSesuai.setBounds(222, 24, 109, 23);
+		panel_1.add(KokohTidakSesuai);
+		
+		
+		KncPintuTidakSesuai.setBackground(Color.GREEN);
+		KncPintuTidakSesuai.setBounds(222, 59, 109, 23);
+		panel_1.add(KncPintuTidakSesuai);
+		
+		
+		KncJendelaTidakSesuai.setBackground(Color.GREEN);
+		KncJendelaTidakSesuai.setBounds(222, 93, 109, 23);
+		panel_1.add(KncJendelaTidakSesuai);
+		
+		
+		BahayaTidakSesuai.setBackground(Color.GREEN);
+		BahayaTidakSesuai.setBounds(222, 128, 109, 23);
+		panel_1.add(BahayaTidakSesuai);
 		
 		JLabel lblKeamanan = new JLabel("Keamanan");
 		lblKeamanan.setBounds(242, 23, 106, 14);
@@ -215,55 +251,55 @@ public class Framedua extends JPanel {
 		lblNewLabel_10.setBounds(10, 149, 67, 14);
 		panel_2.add(lblNewLabel_10);
 		
-		JRadioButton rdbtnNewRadioButton_9 = new JRadioButton("Sesuai");
-		rdbtnNewRadioButton_9.setBackground(Color.ORANGE);
-		rdbtnNewRadioButton_9.setBounds(83, 7, 75, 23);
-		panel_2.add(rdbtnNewRadioButton_9);
 		
-		JRadioButton rdbtnNewRadioButton_10 = new JRadioButton("Sesuai");
-		rdbtnNewRadioButton_10.setBackground(Color.ORANGE);
-		rdbtnNewRadioButton_10.setBounds(83, 42, 75, 23);
-		panel_2.add(rdbtnNewRadioButton_10);
+		KebisinganYes.setBackground(Color.ORANGE);
+		KebisinganYes.setBounds(83, 7, 75, 23);
+		panel_2.add(KebisinganYes);
 		
-		JRadioButton rdbtnNewRadioButton_11 = new JRadioButton("Sesuai");
-		rdbtnNewRadioButton_11.setBackground(Color.ORANGE);
-		rdbtnNewRadioButton_11.setBounds(83, 78, 75, 23);
-		panel_2.add(rdbtnNewRadioButton_11);
 		
-		JRadioButton rdbtnNewRadioButton_12 = new JRadioButton("Sesuai");
-		rdbtnNewRadioButton_12.setBackground(Color.ORANGE);
-		rdbtnNewRadioButton_12.setBounds(83, 112, 75, 23);
-		panel_2.add(rdbtnNewRadioButton_12);
+		BauYes.setBackground(Color.ORANGE);
+		BauYes.setBounds(83, 42, 75, 23);
+		panel_2.add(BauYes);
 		
-		JRadioButton rdbtnSesuai_3 = new JRadioButton("Sesuai");
-		rdbtnSesuai_3.setBackground(Color.ORANGE);
-		rdbtnSesuai_3.setBounds(83, 145, 75, 23);
-		panel_2.add(rdbtnSesuai_3);
 		
-		JRadioButton rdbtnTidakSesuai = new JRadioButton("Tidak Sesuai");
-		rdbtnTidakSesuai.setBackground(Color.ORANGE);
-		rdbtnTidakSesuai.setBounds(160, 7, 102, 23);
-		panel_2.add(rdbtnTidakSesuai);
+		KebocoranYes.setBackground(Color.ORANGE);
+		KebocoranYes.setBounds(83, 78, 75, 23);
+		panel_2.add(KebocoranYes);
 		
-		JRadioButton rdbtnTidakSesuai_1 = new JRadioButton("Tidak Sesuai");
-		rdbtnTidakSesuai_1.setBackground(Color.ORANGE);
-		rdbtnTidakSesuai_1.setBounds(160, 42, 102, 23);
-		panel_2.add(rdbtnTidakSesuai_1);
 		
-		JRadioButton rdbtnTidakSesuai_2 = new JRadioButton("Tidak Sesuai");
-		rdbtnTidakSesuai_2.setBackground(Color.ORANGE);
-		rdbtnTidakSesuai_2.setBounds(160, 78, 102, 23);
-		panel_2.add(rdbtnTidakSesuai_2);
+		KerusakanYes.setBackground(Color.ORANGE);
+		KerusakanYes.setBounds(83, 112, 75, 23);
+		panel_2.add(KerusakanYes);
 		
-		JRadioButton rdbtnTidakSesuai_3 = new JRadioButton("Tidak Sesuai");
-		rdbtnTidakSesuai_3.setBackground(Color.ORANGE);
-		rdbtnTidakSesuai_3.setBounds(160, 112, 102, 23);
-		panel_2.add(rdbtnTidakSesuai_3);
 		
-		JRadioButton rdbtnTidakSesuai_4 = new JRadioButton("Tidak Sesuai");
-		rdbtnTidakSesuai_4.setBackground(Color.ORANGE);
-		rdbtnTidakSesuai_4.setBounds(160, 145, 102, 23);
-		panel_2.add(rdbtnTidakSesuai_4);
+		KeausanYes.setBackground(Color.ORANGE);
+		KeausanYes.setBounds(83, 145, 75, 23);
+		panel_2.add(KeausanYes);
+		
+		
+		KebisinganNo.setBackground(Color.ORANGE);
+		KebisinganNo.setBounds(160, 7, 102, 23);
+		panel_2.add(KebisinganNo);
+		
+		
+		BauNo.setBackground(Color.ORANGE);
+		BauNo.setBounds(160, 42, 102, 23);
+		panel_2.add(BauNo);
+		
+		
+		KebocoranNo.setBackground(Color.ORANGE);
+		KebocoranNo.setBounds(160, 78, 102, 23);
+		panel_2.add(KebocoranNo);
+		
+		
+		KerusakanNo.setBackground(Color.ORANGE);
+		KerusakanNo.setBounds(160, 112, 102, 23);
+		panel_2.add(KerusakanNo);
+		
+		
+		KeausanNo.setBackground(Color.ORANGE);
+		KeausanNo.setBounds(160, 145, 102, 23);
+		panel_2.add(KeausanNo);
 		
 		JLabel lblKenyamanan = new JLabel("Kenyamanan");
 		lblKenyamanan.setBounds(10, 274, 106, 14);
@@ -291,30 +327,30 @@ public class Framedua extends JPanel {
 		lblNewLabel_14.setBounds(10, 153, 46, 14);
 		panel_3.add(lblNewLabel_14);
 		
-		JRadioButton rdbtnAda = new JRadioButton("Ada");
-		rdbtnAda.setBackground(Color.LIGHT_GRAY);
-		rdbtnAda.setBounds(98, 7, 59, 23);
-		panel_3.add(rdbtnAda);
 		
-		JRadioButton rdbtnTidakSesuai_5 = new JRadioButton("Tidak Sesuai");
-		rdbtnTidakSesuai_5.setBackground(Color.LIGHT_GRAY);
-		rdbtnTidakSesuai_5.setBounds(159, 7, 110, 23);
-		panel_3.add(rdbtnTidakSesuai_5);
+		SirkulasiAda.setBackground(Color.LIGHT_GRAY);
+		SirkulasiAda.setBounds(98, 7, 59, 23);
+		panel_3.add(SirkulasiAda);
 		
-		textField = new JTextField();
-		textField.setBounds(95, 58, 150, 20);
-		panel_3.add(textField);
-		textField.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(96, 105, 149, 20);
-		panel_3.add(textField_1);
-		textField_1.setColumns(10);
+		SirkulasiTidakAda.setBackground(Color.LIGHT_GRAY);
+		SirkulasiTidakAda.setBounds(159, 7, 110, 23);
+		panel_3.add(SirkulasiTidakAda);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(95, 150, 150, 20);
-		panel_3.add(textField_2);
-		textField_2.setColumns(10);
+		NilaiPencahayaan = new JTextField();
+		NilaiPencahayaan.setBounds(95, 58, 150, 20);
+		panel_3.add(NilaiPencahayaan);
+		NilaiPencahayaan.setColumns(10);
+		
+		NilaiKelembapan = new JTextField();
+		NilaiKelembapan.setBounds(96, 105, 149, 20);
+		panel_3.add(NilaiKelembapan);
+		NilaiKelembapan.setColumns(10);
+		
+		NilaiSuhu = new JTextField();
+		NilaiSuhu.setBounds(95, 150, 150, 20);
+		panel_3.add(NilaiSuhu);
+		NilaiSuhu.setColumns(10);
 		
 		JLabel label = new JLabel("250 - 350");
 		label.setBounds(98, 76, 69, 14);
