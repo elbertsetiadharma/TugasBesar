@@ -4,11 +4,15 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+
 
 
 public class FrameLogin extends JPanel {
-	private JTextField textField;
-	private JTextField textField_1;
+	JTextField Username;
+	JTextField password;
 
 	/**
 	 * Create the panel.
@@ -32,17 +36,17 @@ public class FrameLogin extends JPanel {
 		lblPassword.setBounds(10, 113, 129, 43);
 		panel.add(lblPassword);
 		
-		textField = new JTextField();
-		textField.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		textField.setBounds(186, 52, 203, 43);
-		panel.add(textField);
-		textField.setColumns(10);
+		Username = new JTextField();
+		Username.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		Username.setBounds(186, 52, 203, 43);
+		panel.add(Username);
+		Username.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		textField_1.setBounds(186, 113, 203, 43);
-		panel.add(textField_1);
-		textField_1.setColumns(10);
+		password = new JTextField();
+		password.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		password.setBounds(186, 113, 203, 43);
+		panel.add(password);
+		password.setColumns(10);
 		
 		
 		
@@ -50,7 +54,8 @@ public class FrameLogin extends JPanel {
 		lblIniDoomKecil.setFont(new Font("Tahoma", Font.PLAIN, 7));
 		lblIniDoomKecil.setBounds(10, 325, 93, 14);
 		panel.add(lblIniDoomKecil);
+		
+		
 
 	}
-
 }
