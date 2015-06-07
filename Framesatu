@@ -6,34 +6,61 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+
 import java.awt.Color;
+
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
-
 
 public class Framesatu extends JPanel {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
-	private JTextField textField_5;
-	private JTextField textField_6;
-	private JTextField textField_7;
-	private JTextField textField_8;
-	private JTextField textField_9;
-	private JTextField textField_10;
-	private JTextField textField_11;
-	private JTextField textField_12;
-	private JTextField textField_13;
-	private JTextField textField_14;
-	private JTextField textField_15;
+	JTextField NamaRuang;
+	JTextField LokasiRuang;
+	JTextField Fakultas;
+	JTextField PanjangRuang;
+	JTextField LebarRuang;
+	JTextField SSID;
+	JTextField Bandwith;
+	JTextField JumlahKursi;
+	JTextField JumlahPintu;
+	JTextField JumlahJendela;
+	JTextField JumlahStopKontak;
+	JTextField JumlahKabelLCD;
+	JTextField JumlahLampu;
+	JTextField Ju;
+	JTextField JumlahAc;
+	JTextField JumlahCctv;
+	JTextField JumlahKipasAngin;
 
 	/**
 	 * Launch the application.
 	 */
+	JRadioButton StekerSesuai = new JRadioButton("1");
+	JRadioButton StekerTidakSesuai = new JRadioButton("0");
+	JRadioButton KabelLcdSesuai = new JRadioButton("1");
+	JRadioButton KabelLcdTidakSesuai = new JRadioButton("0");
+	JRadioButton LampuSesuai = new JRadioButton("1");
+	JRadioButton LampuTidakSesuai = new JRadioButton("0");
+	JRadioButton KipasSesuai = new JRadioButton("1");
+	JRadioButton KipasTidakSesuai = new JRadioButton("0");
+	JRadioButton AcSesuai = new JRadioButton("1");
+	JRadioButton AcTidakSesuai = new JRadioButton("0");
+	JRadioButton CctvSesuai = new JRadioButton("1");
+	JRadioButton CctvTidakSesuai = new JRadioButton("0");
+	JRadioButton LantaiSesuai = new JRadioButton("1");
+	JRadioButton LantaiTidakSesuai = new JRadioButton("0");
+	JRadioButton DindingSesuai = new JRadioButton("1");
+	JRadioButton AtapSesuai = new JRadioButton("1");
+	JRadioButton PintuSesuai = new JRadioButton("1");
+	JRadioButton JendelaSesuai = new JRadioButton("1");
+	JRadioButton DindingTidakSesuai = new JRadioButton("0");
+	JRadioButton AtapTidakSesuai = new JRadioButton("0");
+	JRadioButton PintuTidakSesuai = new JRadioButton("0");
+	JRadioButton JendelaTidakSesuai = new JRadioButton("0");
+	
+	
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -50,361 +77,350 @@ public class Framesatu extends JPanel {
 	/**
 	 * Create the frame.
 	 */
+
 	public Framesatu() {
-		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 684, 465);
 		contentPane = new JPanel();
 
 		setBorder(new EmptyBorder(5, 5, 5, 5));
 		setLayout(null);
-		
+
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.CYAN);
 		panel.setBounds(10, 31, 233, 101);
 		add(panel);
 		panel.setLayout(null);
-		
+
 		JLabel lblNewLabel = new JLabel("Nama Ruang");
 		lblNewLabel.setBounds(10, 11, 92, 14);
 		panel.add(lblNewLabel);
-		
-		textField = new JTextField();
-		textField.setBounds(112, 8, 86, 20);
-		panel.add(textField);
-		textField.setColumns(10);
-		
+
+		NamaRuang = new JTextField();
+		NamaRuang.setBounds(112, 8, 86, 20);
+		panel.add(NamaRuang);
+		NamaRuang.setColumns(10);
+
 		JLabel lblNewLabel_2 = new JLabel("Lokasi Ruang");
 		lblNewLabel_2.setBounds(10, 43, 80, 14);
 		panel.add(lblNewLabel_2);
-		
-		textField_1 = new JTextField();
-		textField_1.setBounds(112, 40, 86, 20);
-		panel.add(textField_1);
-		textField_1.setColumns(10);
-		
+
+		LokasiRuang = new JTextField();
+		LokasiRuang.setBounds(112, 40, 86, 20);
+		panel.add(LokasiRuang);
+		LokasiRuang.setColumns(10);
+
 		JLabel lblFakultas = new JLabel("Fakultas");
 		lblFakultas.setBounds(10, 76, 69, 14);
 		panel.add(lblFakultas);
-		
-		textField_2 = new JTextField();
-		textField_2.setBounds(112, 73, 86, 20);
-		panel.add(textField_2);
-		textField_2.setColumns(10);
-		
+
+		Fakultas = new JTextField();
+		Fakultas.setBounds(112, 73, 86, 20);
+		panel.add(Fakultas);
+		Fakultas.setColumns(10);
+
 		JLabel lblNewLabel_1 = new JLabel("Input Identitas");
 		lblNewLabel_1.setBounds(10, 11, 91, 14);
 
-add(lblNewLabel_1);
-		
+		add(lblNewLabel_1);
+
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(Color.ORANGE);
 		panel_1.setBounds(10, 165, 455, 190);
 		add(panel_1);
 		panel_1.setLayout(null);
-		
+
 		JLabel lblPanjangRuang = new JLabel("Panjang Ruang");
 		lblPanjangRuang.setBounds(10, 11, 92, 14);
 		panel_1.add(lblPanjangRuang);
-		
+
 		JLabel lblNewLabel_3 = new JLabel("Lebar Ruang");
 		lblNewLabel_3.setBounds(10, 36, 73, 14);
 		panel_1.add(lblNewLabel_3);
-		
+
 		JLabel lblNewLabel_4 = new JLabel("SSID");
 		lblNewLabel_4.setBounds(10, 61, 73, 14);
 		panel_1.add(lblNewLabel_4);
-		
+
 		JLabel lblNewLabel_5 = new JLabel("Bandwidth");
 		lblNewLabel_5.setBounds(10, 86, 92, 14);
 		panel_1.add(lblNewLabel_5);
-		
-		textField_3 = new JTextField();
-		textField_3.setBounds(140, 8, 86, 20);
-		panel_1.add(textField_3);
-		textField_3.setColumns(10);
-		
-		textField_4 = new JTextField();
-		textField_4.setBounds(140, 33, 86, 20);
-		panel_1.add(textField_4);
-		textField_4.setColumns(10);
-		
-		textField_5 = new JTextField();
-		textField_5.setBounds(140, 58, 86, 20);
-		panel_1.add(textField_5);
-		textField_5.setColumns(10);
-		
-		textField_6 = new JTextField();
-		textField_6.setBounds(140, 83, 86, 20);
-		panel_1.add(textField_6);
-		textField_6.setColumns(10);
-		
+
+		PanjangRuang = new JTextField();
+		PanjangRuang.setBounds(140, 8, 86, 20);
+		panel_1.add(PanjangRuang);
+		PanjangRuang.setColumns(10);
+
+		LebarRuang = new JTextField();
+		LebarRuang.setBounds(140, 33, 86, 20);
+		panel_1.add(LebarRuang);
+		LebarRuang.setColumns(10);
+
+		SSID = new JTextField();
+		SSID.setBounds(140, 58, 86, 20);
+		panel_1.add(SSID);
+		SSID.setColumns(10);
+
+		Bandwith = new JTextField();
+		Bandwith.setBounds(140, 83, 86, 20);
+		panel_1.add(Bandwith);
+		Bandwith.setColumns(10);
+
 		JLabel lblNewLabel_6 = new JLabel("Jumlah Kursi");
 		lblNewLabel_6.setBounds(236, 11, 86, 14);
 		panel_1.add(lblNewLabel_6);
-		
+
 		JLabel lblNewLabel_7 = new JLabel("Jumlah Pintu");
 		lblNewLabel_7.setBounds(236, 36, 86, 14);
 		panel_1.add(lblNewLabel_7);
-		
+
 		JLabel lblNewLabel_8 = new JLabel("Jumlah Jendela");
 		lblNewLabel_8.setBounds(236, 61, 97, 14);
 		panel_1.add(lblNewLabel_8);
-		
+
 		JLabel lblNewLabel_9 = new JLabel("Jumlah Steker");
 		lblNewLabel_9.setBounds(236, 86, 86, 14);
 		panel_1.add(lblNewLabel_9);
-		
-		textField_7 = new JTextField();
-		textField_7.setBounds(332, 8, 113, 20);
-		panel_1.add(textField_7);
-		textField_7.setColumns(10);
-		
-		textField_8 = new JTextField();
-		textField_8.setBounds(332, 33, 113, 20);
-		panel_1.add(textField_8);
-		textField_8.setColumns(10);
-		
-		textField_9 = new JTextField();
-		textField_9.setBounds(332, 58, 113, 20);
-		panel_1.add(textField_9);
-		textField_9.setColumns(10);
-		
-		textField_10 = new JTextField();
-		textField_10.setBounds(332, 83, 113, 20);
-		panel_1.add(textField_10);
-		textField_10.setColumns(10);
-		
+
+		JumlahKursi = new JTextField();
+		JumlahKursi.setBounds(332, 8, 113, 20);
+		panel_1.add(JumlahKursi);
+		JumlahKursi.setColumns(10);
+
+		JumlahPintu = new JTextField();
+		JumlahPintu.setBounds(332, 33, 113, 20);
+		panel_1.add(JumlahPintu);
+		JumlahPintu.setColumns(10);
+
+		JumlahJendela = new JTextField();
+		JumlahJendela.setBounds(332, 58, 113, 20);
+		panel_1.add(JumlahJendela);
+		JumlahJendela.setColumns(10);
+
+		JumlahStopKontak = new JTextField();
+		JumlahStopKontak.setBounds(332, 83, 113, 20);
+		panel_1.add(JumlahStopKontak);
+		JumlahStopKontak.setColumns(10);
+
 		JLabel lblNewLabel_10 = new JLabel("Jumlah Kabel LCD");
 		lblNewLabel_10.setBounds(10, 111, 104, 14);
 		panel_1.add(lblNewLabel_10);
-		
+
 		JLabel lblNewLabel_11 = new JLabel("Jumlah Lampu");
 		lblNewLabel_11.setBounds(10, 136, 92, 14);
 		panel_1.add(lblNewLabel_11);
-		
+
 		JLabel lblNewLabel_12 = new JLabel("Jumlah Kipas");
 		lblNewLabel_12.setBounds(10, 161, 92, 14);
 		panel_1.add(lblNewLabel_12);
-		
+
 		JLabel lblNewLabel_13 = new JLabel("Jumlah AC");
 		lblNewLabel_13.setBounds(236, 111, 73, 14);
 		panel_1.add(lblNewLabel_13);
-		
+
 		JLabel lblNewLabel_14 = new JLabel("Jumlah CCTV");
 		lblNewLabel_14.setBounds(236, 136, 86, 14);
 		panel_1.add(lblNewLabel_14);
+
+		JumlahKabelLCD = new JTextField();
+		JumlahKabelLCD.setBounds(140, 108, 86, 20);
+		panel_1.add(JumlahKabelLCD);
+		JumlahKabelLCD.setColumns(10);
+
+		JumlahLampu = new JTextField();
+		JumlahLampu.setBounds(140, 133, 86, 20);
+		panel_1.add(JumlahLampu);
+		JumlahLampu.setColumns(10);
+
+		Ju = new JTextField();
+		Ju.setBounds(140, 158, 86, 20);
+		panel_1.add(Ju);
+		Ju.setColumns(10);
+
+		JumlahAc = new JTextField();
+		JumlahAc.setBounds(332, 108, 113, 20);
+		panel_1.add(JumlahAc);
+		JumlahAc.setColumns(10);
+
+		JumlahCctv = new JTextField();
+		JumlahCctv.setBounds(332, 133, 113, 20);
+		panel_1.add(JumlahCctv);
+		JumlahCctv.setColumns(10);
 		
-		textField_11 = new JTextField();
-		textField_11.setBounds(140, 108, 86, 20);
-		panel_1.add(textField_11);
-		textField_11.setColumns(10);
-		
-		textField_12 = new JTextField();
-		textField_12.setBounds(140, 133, 86, 20);
-		panel_1.add(textField_12);
-		textField_12.setColumns(10);
-		
-		textField_13 = new JTextField();
-		textField_13.setBounds(140, 158, 86, 20);
-		panel_1.add(textField_13);
-		textField_13.setColumns(10);
-		
-		textField_14 = new JTextField();
-		textField_14.setBounds(332, 108, 113, 20);
-		panel_1.add(textField_14);
-		textField_14.setColumns(10);
-		
-		textField_15 = new JTextField();
-		textField_15.setBounds(332, 133, 113, 20);
-		panel_1.add(textField_15);
-		textField_15.setColumns(10);
-		
+		JumlahKipasAngin = new JTextField();
+		JumlahKipasAngin.setBounds(140, 158, 86, 20);
+		panel_1.add(JumlahKipasAngin);
+		JumlahKipasAngin.setColumns(10);
+
 		JLabel lblInputHitungRuang = new JLabel("Input Hitung Ruang");
 		lblInputHitungRuang.setBounds(10, 151, 104, 14);
 		add(lblInputHitungRuang);
-		
+
 		JPanel panel_2 = new JPanel();
 		panel_2.setBackground(Color.GREEN);
 		panel_2.setBounds(475, 31, 199, 324);
 		add(panel_2);
 		panel_2.setLayout(null);
-		
+
 		JLabel lblNewLabel_15 = new JLabel("Steker");
 		lblNewLabel_15.setBounds(10, 11, 65, 14);
 		panel_2.add(lblNewLabel_15);
-		
+
 		JLabel lblNewLabel_16 = new JLabel("Kabel LCD");
 		lblNewLabel_16.setBounds(10, 36, 78, 14);
 		panel_2.add(lblNewLabel_16);
-		
+
 		JLabel lblNewLabel_17 = new JLabel("Lampu");
 		lblNewLabel_17.setBounds(10, 61, 65, 14);
 		panel_2.add(lblNewLabel_17);
-		
+
 		JLabel lblNewLabel_18 = new JLabel("Kipas Angin");
 		lblNewLabel_18.setBounds(10, 86, 78, 14);
 		panel_2.add(lblNewLabel_18);
-		
+
 		JLabel lblNewLabel_19 = new JLabel("AC");
 		lblNewLabel_19.setBounds(10, 111, 65, 14);
 		panel_2.add(lblNewLabel_19);
-		
+
 		JLabel lblNewLabel_20 = new JLabel("CCTV");
 		lblNewLabel_20.setBounds(10, 136, 65, 14);
 		panel_2.add(lblNewLabel_20);
-		
+
 		JLabel lblNewLabel_21 = new JLabel("Lantai");
 		lblNewLabel_21.setBounds(10, 161, 65, 14);
 		panel_2.add(lblNewLabel_21);
-		
+
 		JLabel lblNewLabel_22 = new JLabel("Dinding");
 		lblNewLabel_22.setBounds(10, 186, 65, 14);
 		panel_2.add(lblNewLabel_22);
-		
+
 		JLabel lblNewLabel_23 = new JLabel("Atap");
 		lblNewLabel_23.setBounds(10, 211, 65, 14);
 		panel_2.add(lblNewLabel_23);
-		
+
 		JLabel lblNewLabel_24 = new JLabel("Pintu");
 		lblNewLabel_24.setBounds(10, 236, 65, 14);
 		panel_2.add(lblNewLabel_24);
-		
+
 		JLabel lblNewLabel_25 = new JLabel("Jendela");
 		lblNewLabel_25.setBounds(10, 261, 65, 14);
 		panel_2.add(lblNewLabel_25);
+
 		
-		JRadioButton radioButton = new JRadioButton("1");
-		radioButton.setBackground(Color.GREEN);
-		radioButton.setBounds(81, 7, 37, 23);
-		panel_2.add(radioButton);
+		StekerSesuai.setBackground(Color.GREEN);
+		StekerSesuai.setBounds(81, 7, 37, 23);
+		panel_2.add(StekerSesuai);
+
+		StekerTidakSesuai.setBackground(Color.GREEN);
+		StekerTidakSesuai.setBounds(119, 7, 47, 23);
+		panel_2.add(StekerTidakSesuai);
+
 		
-		JRadioButton radioButton_1 = new JRadioButton("0");
-		radioButton_1.setBackground(Color.GREEN);
-		radioButton_1.setBounds(119, 7, 47, 23);
-		panel_2.add(radioButton_1);
+		KabelLcdSesuai.setBackground(Color.GREEN);
+		KabelLcdSesuai.setBounds(81, 32, 37, 23);
+		panel_2.add(KabelLcdSesuai);
+
+		KabelLcdTidakSesuai.setBackground(Color.GREEN);
+		KabelLcdTidakSesuai.setBounds(119, 32, 47, 23);
+		panel_2.add(KabelLcdTidakSesuai);
+
+		LampuSesuai.setBackground(Color.GREEN);
+		LampuSesuai.setBounds(81, 57, 37, 23);
+		panel_2.add(LampuSesuai);
+
+		LampuTidakSesuai.setBackground(Color.GREEN);
+		LampuTidakSesuai.setBounds(119, 57, 47, 23);
+		panel_2.add(LampuTidakSesuai);
+
+		KipasSesuai.setBackground(Color.GREEN);
+		KipasSesuai.setBounds(81, 82, 37, 23);
+		panel_2.add(KipasSesuai);
+
+		KipasTidakSesuai.setBackground(Color.GREEN);
+		KipasTidakSesuai.setBounds(119, 82, 47, 23);
+		panel_2.add(KipasTidakSesuai);
+
+		AcSesuai.setBackground(Color.GREEN);
+		AcSesuai.setBounds(81, 107, 37, 23);
+		panel_2.add(AcSesuai);
+
+		AcTidakSesuai.setBackground(Color.GREEN);
+		AcTidakSesuai.setBounds(119, 107, 47, 23);
+		panel_2.add(AcTidakSesuai);
+
+		CctvSesuai.setBackground(Color.GREEN);
+		CctvSesuai.setBounds(81, 132, 37, 23);
+		panel_2.add(CctvSesuai);
+
+		CctvTidakSesuai.setBackground(Color.GREEN);
+		CctvTidakSesuai.setBounds(119, 132, 47, 23);
+		panel_2.add(CctvTidakSesuai);
+
+		LantaiSesuai.setBackground(Color.GREEN);
+		LantaiSesuai.setBounds(81, 157, 37, 23);
+		panel_2.add(LantaiSesuai);
+
 		
-		JRadioButton radioButton_2 = new JRadioButton("1");
-		radioButton_2.setBackground(Color.GREEN);
-		radioButton_2.setBounds(81, 32, 37, 23);
-		panel_2.add(radioButton_2);
-		
-		JRadioButton radioButton_3 = new JRadioButton("0");
-		radioButton_3.setBackground(Color.GREEN);
-		radioButton_3.setBounds(119, 32, 47, 23);
-		panel_2.add(radioButton_3);
-		
-		JRadioButton radioButton_4 = new JRadioButton("1");
-		radioButton_4.setBackground(Color.GREEN);
-		radioButton_4.setBounds(81, 57, 37, 23);
-		panel_2.add(radioButton_4);
-		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("0");
-		rdbtnNewRadioButton.setBackground(Color.GREEN);
-		rdbtnNewRadioButton.setBounds(119, 57, 47, 23);
-		panel_2.add(rdbtnNewRadioButton);
-		
-		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("1");
-		rdbtnNewRadioButton_1.setBackground(Color.GREEN);
-		rdbtnNewRadioButton_1.setBounds(81, 82, 37, 23);
-		panel_2.add(rdbtnNewRadioButton_1);
-		
-		JRadioButton radioButton_5 = new JRadioButton("0");
-		radioButton_5.setBackground(Color.GREEN);
-		radioButton_5.setBounds(119, 82, 47, 23);
-		panel_2.add(radioButton_5);
-		
-		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("1");
-		rdbtnNewRadioButton_2.setBackground(Color.GREEN);
-		rdbtnNewRadioButton_2.setBounds(81, 107, 37, 23);
-		panel_2.add(rdbtnNewRadioButton_2);
-		
-		JRadioButton radioButton_6 = new JRadioButton("0");
-		radioButton_6.setBackground(Color.GREEN);
-		radioButton_6.setBounds(119, 107, 47, 23);
-		panel_2.add(radioButton_6);
-		
-		JRadioButton radioButton_7 = new JRadioButton("1");
-		radioButton_7.setBackground(Color.GREEN);
-		radioButton_7.setBounds(81, 132, 37, 23);
-		panel_2.add(radioButton_7);
-		
-		JRadioButton radioButton_8 = new JRadioButton("0");
-		radioButton_8.setBackground(Color.GREEN);
-		radioButton_8.setBounds(119, 132, 47, 23);
-		panel_2.add(radioButton_8);
-		
-		JRadioButton radioButton_9 = new JRadioButton("1");
-		radioButton_9.setBackground(Color.GREEN);
-		radioButton_9.setBounds(81, 157, 37, 23);
-		panel_2.add(radioButton_9);
-		
-		JRadioButton radioButton_10 = new JRadioButton("0");
-		radioButton_10.setBackground(Color.GREEN);
-		radioButton_10.setBounds(119, 157, 47, 23);
-		panel_2.add(radioButton_10);
-		
-		JRadioButton radioButton_11 = new JRadioButton("1");
-		radioButton_11.setBackground(Color.GREEN);
-		radioButton_11.setBounds(81, 182, 37, 23);
-		panel_2.add(radioButton_11);
-		
-		JRadioButton radioButton_12 = new JRadioButton("1");
-		radioButton_12.setBackground(Color.GREEN);
-		radioButton_12.setBounds(81, 207, 37, 23);
-		panel_2.add(radioButton_12);
-		
-		JRadioButton radioButton_13 = new JRadioButton("1");
-		radioButton_13.setBackground(Color.GREEN);
-		radioButton_13.setBounds(81, 232, 37, 23);
-		panel_2.add(radioButton_13);
-		
-		JRadioButton radioButton_14 = new JRadioButton("1");
-		radioButton_14.setBackground(Color.GREEN);
-		radioButton_14.setBounds(81, 257, 37, 23);
-		panel_2.add(radioButton_14);
-		
-		JRadioButton radioButton_15 = new JRadioButton("0");
-		radioButton_15.setBackground(Color.GREEN);
-		radioButton_15.setBounds(119, 182, 47, 23);
-		panel_2.add(radioButton_15);
-		
-		JRadioButton radioButton_16 = new JRadioButton("0");
-		radioButton_16.setBackground(Color.GREEN);
-		radioButton_16.setBounds(119, 207, 47, 23);
-		panel_2.add(radioButton_16);
-		
-		JRadioButton radioButton_17 = new JRadioButton("0");
-		radioButton_17.setBackground(Color.GREEN);
-		radioButton_17.setBounds(119, 232, 47, 23);
-		panel_2.add(radioButton_17);
-		
-		JRadioButton radioButton_18 = new JRadioButton("0");
-		radioButton_18.setBackground(Color.GREEN);
-		radioButton_18.setBounds(119, 257, 47, 23);
-		panel_2.add(radioButton_18);
-		
+		LantaiTidakSesuai.setBackground(Color.GREEN);
+		LantaiTidakSesuai.setBounds(119, 157, 47, 23);
+		panel_2.add(LantaiTidakSesuai);
+
+		DindingSesuai.setBackground(Color.GREEN);
+		DindingSesuai.setBounds(81, 182, 37, 23);
+		panel_2.add(DindingSesuai);
+
+		AtapSesuai.setBackground(Color.GREEN);
+		AtapSesuai.setBounds(81, 207, 37, 23);
+		panel_2.add(AtapSesuai);
+
+		PintuSesuai.setBackground(Color.GREEN);
+		PintuSesuai.setBounds(81, 232, 37, 23);
+		panel_2.add(PintuSesuai);
+
+		JendelaSesuai.setBackground(Color.GREEN);
+		JendelaSesuai.setBounds(81, 257, 37, 23);
+		panel_2.add(JendelaSesuai);
+
+		DindingTidakSesuai.setBackground(Color.GREEN);
+		DindingTidakSesuai.setBounds(119, 182, 47, 23);
+		panel_2.add(DindingTidakSesuai);
+
+		AtapTidakSesuai.setBackground(Color.GREEN);
+		AtapTidakSesuai.setBounds(119, 207, 47, 23);
+		panel_2.add(AtapTidakSesuai);
+
+		PintuTidakSesuai.setBackground(Color.GREEN);
+		PintuTidakSesuai.setBounds(119, 232, 47, 23);
+		panel_2.add(PintuTidakSesuai);
+
+		JendelaTidakSesuai.setBackground(Color.GREEN);
+		JendelaTidakSesuai.setBounds(119, 257, 47, 23);
+		panel_2.add(JendelaTidakSesuai);
+
 		JLabel lblKeterangan = new JLabel("Keterangan : ");
 		lblKeterangan.setBounds(10, 286, 78, 14);
 		panel_2.add(lblKeterangan);
-		
+
 		JLabel lblNewLabel_26 = new JLabel("1 . Sesuai");
 		lblNewLabel_26.setBounds(81, 287, 81, 14);
 		panel_2.add(lblNewLabel_26);
-		
+
 		JLabel lblNewLabel_27 = new JLabel("0 . Tidak Sesuai");
 		lblNewLabel_27.setBounds(81, 299, 108, 14);
 		panel_2.add(lblNewLabel_27);
-		
-		JLabel lblSettingKondisiSarana = new JLabel("Setting Kondisi Dan Sarana");
-		lblSettingKondisiSarana.setBounds(435, 11, 156, 14);
+
+		JLabel lblSettingKondisiSarana = new JLabel(
+				"Setting Kondisi Dan Sarana");
+		lblSettingKondisiSarana.setBounds(475, 11, 156, 14);
 		add(lblSettingKondisiSarana);
-		
+
 		JPanel panel_3 = new JPanel();
 		panel_3.setBackground(Color.LIGHT_GRAY);
-		panel_3.setBounds(253, 29, 172, 103);
+		panel_3.setBounds(253, 29, 212, 107);
 		add(panel_3);
 		panel_3.setLayout(null);
 		
 		
+
 	}
 }
