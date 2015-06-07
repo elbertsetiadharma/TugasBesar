@@ -1,15 +1,35 @@
 import java.util.Scanner;
 
+
 public class inputan {
 
 	private static HitungKondisiDanSarana kondisi;
 	private static KebersihanKelas bersih;
 	private static KeamananRuangKelas keamananan;
 
+	public void login(){
+		String username ;
+		String password ;
+		Scanner input = new Scanner (System.in);
+		System.out.println("form Login");
+		System.out.println("Username :");
+		 username = input.next();
+		System.out.println("Password : ");
+		password=input.next();
+		if(username.equals("abc")&&password.equals("def")){
+			System.out.println("Login berhasil");
+			System.out.println("=========================");
+			Pilihan();
+		}else{
+			System.out.println("Login gagal username atau password salah \nmasukkan kembali : ");
+			login();
+		}
+	}
 	public void jalan() {
+		
 		Scanner in = new Scanner(System.in);
 		System.out.print("Masukkan Nama Ruang , Lokasi, dan Fakultas :\n");
-		kondisi = new HitungKondisiDanSarana (in.next(), in.next(), in.next());
+		kondisi = new HitungKondisiDanSarana(in.next(), in.next(), in.next());
 		System.out.print("Masukkan panjangRuang, lebarRuang :\n");
 		kondisi.setPanjangRuang(in.nextInt());
 		kondisi.setLebarRuang(in.nextInt());
@@ -155,8 +175,9 @@ public class inputan {
 
 		keamananan = new KeamananRuangKelas(kondisi.getNamaRuang(),
 				kondisi.getLokasiRuang(), kondisi.getFakultas());
-		boolean ulang = false;
-		while (ulang == false) {
+		//boolean ulang = false;
+		//while (ulang == false)
+		{
 			System.out.println("Masukkan kekokohan ");
 			keamananan.setKekokohan(in.next());
 			System.out.println("Kekokohan "
@@ -183,12 +204,12 @@ public class inputan {
 					+ "\nInventaris Tentang Keamanan yang Tidak Sesuai : "
 					+ keamananan.tidaksesuai() + "\nDeskripsi Kelas : "
 					+ keamananan.deskripsiKelas() + "\nIngin Edit? (y/n)");
-			if (in.next().toLowerCase().equals("y")) {
+			/*if (in.next().toLowerCase().equals("y")) {
 				ulang = false;
 			} else {
 				ulang = true;
 				break;
-			}
+			}*/
 		}
 
 		Database.simpanKondisi(kondisi);
@@ -206,7 +227,7 @@ public class inputan {
 
 	}
 
-	void tampil() {
+	public void tampil() {
 		System.out.println(kondisi.getInputBandwidth());
 		System.out.println(kondisi.getFakultas());
 		System.out.println(kondisi.getJumlahAc());
@@ -228,13 +249,22 @@ public class inputan {
 		//System.out.println(bersih.getFakultas());
 		System.out.println(bersih.getBau());
 		System.out.println(keamananan.getBahaya());
+		System.out.println("Kembali ke main menu ? (yes/no)");
+		Scanner input = new Scanner(System.in);
+		String menu = input.next();
+		if(menu.equals("yes")){
+			Pilihan();
+		}else {
+			System.out.println("Berhasil keluar");
+			Pilihan();
+		}
 	}
 
 	void Pilihan() {
 		int pilihan;
 
 		Scanner input = new Scanner(System.in);
-		System.out.println("1.input 2.tampil 3.edit");
+		System.out.println("1.input 2.tampil 3.edit 4.Logout");
 		pilihan = input.nextInt();
 		switch (pilihan) {
 		case 1:
@@ -248,6 +278,9 @@ public class inputan {
 			baca ();
 			jalan();
 			break;
+		case 4:
+			System.out.println("Logout Sukses");
+			login();
 		}
 	}
 
